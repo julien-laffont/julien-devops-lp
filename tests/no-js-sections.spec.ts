@@ -2,7 +2,7 @@
 // "Disponibilidade e fiabilidade", "Quem é o Julien" and the final CTA.
 import { expect, test } from '@playwright/test';
 import { inEachBuild } from './builds';
-import { LANGUAGES, LINKEDIN, NAME, BOOKING_PAGE, type Language } from './expected';
+import { LANGUAGES, LINKEDIN, MALT, NAME, BOOKING_PAGE, type Language } from './expected';
 
 // The expected values, taken from the spec (#54). In Portuguese, the approved texts are exactly as
 // the spec gives them; French and English are translations the intern reviews before the Commercial
@@ -62,6 +62,7 @@ const FRENCH = {
 		wayOfWorking:
 			"J'interviens sur ton projet en français, en anglais ou en portugais. J'utilise des technologies modernes et éprouvées, je limite autant que possible la dépendance à un fournisseur et je documente ce que je livre pour que ton équipe reste autonome. Mes solutions s'adaptent à tes contraintes techniques et métier, pas l'inverse.",
 		linkedin: 'Voir mon profil LinkedIn',
+		malt: 'Voir mon profil Malt',
 	},
 	finalCta: {
 		title: 'Ton SaaS mérite mieux que des correctifs en urgence.',
@@ -124,6 +125,7 @@ const EXPECTED = {
 			wayOfWorking:
 				'Trabalho no teu projeto em francês, inglês ou português. Uso tecnologias modernas e comprovadas, limito tanto quanto possível a dependência de um fornecedor e documento o que entrego para que a tua equipa continue autónoma. As minhas soluções adaptam-se às tuas restrições técnicas e de negócio, e não o contrário.',
 			linkedin: 'Ver o meu perfil no LinkedIn',
+			malt: 'Ver o meu perfil no Malt',
 		},
 		finalCta: {
 			title: 'O teu SaaS merece mais do que correções de emergência.',
@@ -153,7 +155,7 @@ const EXPECTED = {
 				'99.99% Disponibilité très élevée',
 			],
 		},
-		about: { ...FRENCH.about, linkedin: 'See my LinkedIn profile' },
+		about: { ...FRENCH.about, linkedin: 'See my LinkedIn profile', malt: 'See my Malt profile' },
 		finalCta: {
 			...FRENCH.finalCta,
 			bookingNotice:
@@ -264,7 +266,7 @@ inEachBuild((build) => {
 				expect(await page.getByRole('main').textContent()).not.toMatch(/(?<![\d.,])99\s?%/);
 			});
 
-			test(`"${about.title}": the photo, the name, the Designation, the way of working and LinkedIn`, async ({
+			test(`"${about.title}": the photo, the name, the Designation, the way of working, LinkedIn and Malt`, async ({
 				page,
 			}) => {
 				const images = new Map<string, string>();
@@ -281,6 +283,10 @@ inEachBuild((build) => {
 				await expect(
 					section.getByRole('link', { name: about.linkedin, exact: true }),
 				).toHaveAttribute('href', LINKEDIN);
+				await expect(section.getByRole('link', { name: about.malt, exact: true })).toHaveAttribute(
+					'href',
+					MALT,
+				);
 
 				// Far from the top: the photo is only requested when it is reached.
 				const photo = section.getByRole('img', { name: NAME, exact: true });

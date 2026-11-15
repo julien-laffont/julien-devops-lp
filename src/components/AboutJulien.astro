@@ -9,6 +9,7 @@ import { values } from '../config/values';
 import { withNonBreakingSpaces } from '../lib/spaces';
 import LinkedInLogo from './LinkedInLogo.astro';
 import LogoName from './LogoName.astro';
+import MaltLogo from './MaltLogo.astro';
 
 interface Props {
 	title: string;
@@ -17,9 +18,11 @@ interface Props {
 	wayOfWorking: string;
 	/** The text of the link to his LinkedIn profile. */
 	linkedin: string;
+	/** The text of the link to his Malt profile. */
+	malt: string;
 }
 
-const { title, designation, wayOfWorking, linkedin } = Astro.props;
+const { title, designation, wayOfWorking, linkedin, malt } = Astro.props;
 ---
 
 <section
@@ -50,14 +53,22 @@ const { title, designation, wayOfWorking, linkedin } = Astro.props;
 		<p data-reveal class="max-w-2xl font-heading text-[clamp(1.4rem,2.6vw,2rem)] leading-snug">
 			{withNonBreakingSpaces(wayOfWorking)}
 		</p>
-		<a
-			href={values.linkedin}
-			data-reveal
-			class="inline-flex min-h-11 items-center gap-2 justify-self-start font-semibold text-purple underline-offset-3 hover:underline"
-		>
-			<LinkedInLogo size={18} />
-			{linkedin}
-		</a>
+		<div data-reveal class="flex flex-wrap gap-x-6">
+			<a
+				href={values.linkedin}
+				class="inline-flex min-h-11 items-center gap-2 font-semibold text-purple underline-offset-3 hover:underline"
+			>
+				<LinkedInLogo size={18} />
+				{linkedin}
+			</a>
+			<a
+				href={values.malt}
+				class="inline-flex min-h-11 items-center gap-2 font-semibold text-purple underline-offset-3 hover:underline"
+			>
+				<MaltLogo size={18} />
+				{malt}
+			</a>
+		</div>
 		{/* The proof (career, projects, clients) goes here once it exists (#54). */}
 	</div>
 </section>

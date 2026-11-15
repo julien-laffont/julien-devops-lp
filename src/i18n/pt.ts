@@ -636,6 +636,7 @@ export const pt: Dictionary = {
 			wayOfWorking:
 				'Trabalho no teu projeto em francês, inglês ou português. Uso tecnologias modernas e comprovadas, limito tanto quanto possível a dependência de um fornecedor e documento o que entrego para que a tua equipa continue autónoma. As minhas soluções adaptam-se às tuas restrições técnicas e de negócio, e não o contrário.',
 			linkedin: 'Ver o meu perfil no LinkedIn',
+			malt: 'Ver o meu perfil no Malt',
 		},
 		testimonials: {
 			title: 'O que dizem os clientes',

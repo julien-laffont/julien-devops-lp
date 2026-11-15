@@ -740,6 +740,7 @@ export const fr = {
 			wayOfWorking:
 				"J'interviens sur ton projet en français, en anglais ou en portugais. J'utilise des technologies modernes et éprouvées, je limite autant que possible la dépendance à un fournisseur et je documente ce que je livre pour que ton équipe reste autonome. Mes solutions s'adaptent à tes contraintes techniques et métier, pas l'inverse.",
 			linkedin: 'Voir mon profil LinkedIn',
+			malt: 'Voir mon profil Malt',
 		},
 		/** The Testimonials. Their texts, authors and approvals are in src/config/testimonials.ts. */
 		testimonials: {
