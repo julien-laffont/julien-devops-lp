@@ -20,7 +20,6 @@ const ENTRIES: { slug: string; name: Record<Language, string> }[] = [
 		slug: 'cloud/',
 		name: { fr: 'Choisir son cloud', en: 'Choisir son cloud', pt: 'Escolher a cloud' },
 	},
-	{ slug: 'ecology/', name: { fr: 'Écologie', en: 'Ecology', pt: 'Ecologia' } },
 	{
 		slug: 'sovereignty/',
 		name: {

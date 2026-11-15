@@ -91,7 +91,7 @@ _Portuguese_: Soberania dos dados
 _Avoid_: data in the EU (only says where the data is), sovereign cloud (the providers' marketing label)
 
 **Resources**:
-The header submenu of the pages that help a CTO decide: choosing a cloud, ecology, data sovereignty and availability. Its French label is «Ressources».
+The header submenu of the pages that help a CTO decide: choosing a cloud, data sovereignty and availability. Ecology is not in it: it has its own green 🍃 link in the header. Its French label is «Ressources».
 _Portuguese_: Recursos
 
 **Testimonial**:
