@@ -2,7 +2,15 @@
 // and the booking button, and the footer.
 import { expect, test, type Page } from '@playwright/test';
 import { inEachBuild, pagesOf } from './builds';
-import { equivalent, LANGUAGES, LINKEDIN, NAME, BOOKING_PAGE, type Language } from './expected';
+import {
+	equivalent,
+	LANGUAGES,
+	LINKEDIN,
+	MALT,
+	NAME,
+	BOOKING_PAGE,
+	type Language,
+} from './expected';
 
 const PHONE_WIDTHS = [320, 375];
 
@@ -157,6 +165,25 @@ inEachBuild((build) => {
 				expect(box.x + box.width).toBeLessThanOrEqual(bookButton.x);
 			});
 
+			test('the header links to Malt, between LinkedIn and the button', async ({ page }) => {
+				await page.setViewportSize({ width: 1280, height: 700 });
+				await page.goto(path);
+				const header = page.getByRole('banner');
+				const malt = header.getByRole('link', { name: 'Malt', exact: true });
+				await expect(malt).toHaveAttribute('href', MALT);
+				const box = (await malt.boundingBox())!;
+				expect(box.width).toBeGreaterThanOrEqual(44);
+				expect(box.height).toBeGreaterThanOrEqual(44);
+				const linkedin = (await header
+					.getByRole('link', { name: 'LinkedIn', exact: true })
+					.boundingBox())!;
+				const bookButton = (await header
+					.getByRole('link', { name: button, exact: true })
+					.boundingBox())!;
+				expect(box.x).toBeGreaterThanOrEqual(linkedin.x + linkedin.width);
+				expect(box.x + box.width).toBeLessThanOrEqual(bookButton.x);
+			});
+
 			test('the header button has a 44×44 px touch target', async ({ page }) => {
 				for (const width of [...PHONE_WIDTHS, 1280]) {
 					await page.setViewportSize({ width, height: 700 });
@@ -194,6 +221,22 @@ inEachBuild((build) => {
 						await menuButton(page).click();
 						await expect(linkedin).toBeVisible();
 						await expect(linkedin).toHaveAttribute('href', LINKEDIN);
+					});
+
+					test('Malt moves into the menu, below LinkedIn', async ({ page }) => {
+						await page.goto(path);
+						const header = page.getByRole('banner');
+						const malt = header.getByRole('link', { name: 'Malt', exact: true });
+						await expect(malt).toBeHidden();
+						await menuButton(page).click();
+						await expect(malt).toBeVisible();
+						await expect(malt).toHaveAttribute('href', MALT);
+						const linkedin = (await header
+							.getByRole('link', { name: 'LinkedIn', exact: true })
+							.boundingBox())!;
+						expect((await malt.boundingBox())!.y).toBeGreaterThanOrEqual(
+							linkedin.y + linkedin.height,
+						);
 					});
 
 					test('the languages move into the menu, which closes on an outside click and with Escape', async ({

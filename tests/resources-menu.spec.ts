@@ -2,7 +2,7 @@
 // without JS and with the keyboard, marks the page the Visitor is on and moves into the phone menu.
 import { expect, test, type Page } from '@playwright/test';
 import { inEachBuild, pagesOf } from './builds';
-import { LANGUAGES, LINKEDIN, NAME, type Language } from './expected';
+import { LANGUAGES, LINKEDIN, MALT, NAME, type Language } from './expected';
 
 /** The submenu's name. English shows the French one until the English translation. */
 const MENU: Record<Language, string> = { fr: 'Ressources', en: 'Ressources', pt: 'Recursos' };
@@ -71,7 +71,7 @@ inEachBuild((build) => {
 	for (const language of build.phase.publishedLanguages) {
 		const { prefix, button } = LANGUAGES[language];
 
-		test(`${prefix}: the header shows the logo, the challenges, "${MENU[language]}", LinkedIn and the button, in this order`, async ({
+		test(`${prefix}: the header shows the logo, the challenges, "${MENU[language]}", LinkedIn, Malt and the button, in this order`, async ({
 			page,
 		}) => {
 			await page.setViewportSize({ width: 1280, height: 800 });
@@ -82,9 +82,11 @@ inEachBuild((build) => {
 				header.getByRole('navigation', { name: CHALLENGES[language] }),
 				header.getByRole('navigation', { name: MENU[language] }),
 				header.getByRole('link', { name: 'LinkedIn', exact: true }),
+				header.getByRole('link', { name: 'Malt', exact: true }),
 				header.getByRole('link', { name: button, exact: true }),
 			];
 			await expect(order[3]).toHaveAttribute('href', LINKEDIN);
+			await expect(order[4]).toHaveAttribute('href', MALT);
 			let previousEnd = 0;
 			for (const item of order) {
 				const box = (await item.boundingBox())!;

@@ -5,6 +5,8 @@
 export const SITE = 'https://devops.julienlaffont.com';
 export const BOOKING_PAGE = 'https://calendly.com/contact-julienlaffont/appel-cadrage';
 export const LINKEDIN = 'https://www.linkedin.com/in/julien-laffont-4a3623134/';
+/** Julien's Malt profile. */
+export const MALT = 'https://www.malt.fr/profile/julienlaffont';
 export const NAME = 'Julien Laffont';
 /** The email on the domain, chosen by Julien (#56). */
 export const EMAIL = 'hello@julienlaffont.com';
