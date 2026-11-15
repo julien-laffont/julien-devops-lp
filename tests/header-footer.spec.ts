@@ -18,6 +18,13 @@ const PHONE_WIDTHS = [320, 375];
 const menuButton = (page: Page) =>
 	page.getByRole('banner').locator('summary').filter({ visible: true });
 
+/** On a computer, the button that opens the language menu: it shows the current language. */
+const languageButton = (page: Page, label: string) =>
+	page
+		.getByRole('banner')
+		.locator('summary')
+		.filter({ hasText: new RegExp(`^${label}\\b`), visible: true });
+
 inEachBuild((build) => {
 	const publishedLanguages: readonly Language[] = build.phase.publishedLanguages;
 	const unpublishedLanguages = (Object.keys(LANGUAGES) as Language[]).filter(
@@ -34,6 +41,7 @@ inEachBuild((build) => {
 				page,
 			}) => {
 				await page.goto(path);
+				await languageButton(page, label).click();
 				const header = page.getByRole('banner');
 				for (const other of otherLanguages) {
 					const link = header.getByRole('link', { name: LANGUAGES[other].name });
@@ -50,6 +58,42 @@ inEachBuild((build) => {
 				await expect(
 					header.locator('[aria-current]').filter({ hasText: label, visible: true }),
 				).toHaveText(new RegExp(`^${label}\\b.*${name}`));
+			});
+
+			test('on a computer, the header shows only the current language until its menu opens', async ({
+				page,
+			}) => {
+				await page.setViewportSize({ width: 1280, height: 700 });
+				await page.goto(path);
+				const header = page.getByRole('banner');
+				const links = otherLanguages.map((other) =>
+					header.getByRole('link', { name: LANGUAGES[other].name }),
+				);
+				for (const link of links) await expect(link).toBeHidden();
+
+				await languageButton(page, label).click();
+				for (const link of links) await expect(link).toBeVisible();
+				await page.getByRole('main').click({ position: { x: 5, y: 300 } });
+				for (const link of links) await expect(link).toBeHidden();
+
+				await languageButton(page, label).click();
+				for (const link of links) await expect(link).toBeVisible();
+				await page.keyboard.press('Escape');
+				for (const link of links) await expect(link).toBeHidden();
+			});
+
+			test.describe('on a computer, without JavaScript', () => {
+				test.use({ javaScriptEnabled: false, viewport: { width: 1280, height: 700 } });
+
+				test('the language menu opens and leads to the other languages', async ({ page }) => {
+					await page.goto(path);
+					await languageButton(page, label).click();
+					for (const other of otherLanguages) {
+						await expect(
+							page.getByRole('banner').getByRole('link', { name: LANGUAGES[other].name }),
+						).toHaveAttribute('href', equivalent(path, language, other));
+					}
+				});
 			});
 
 			test('the switcher only shows published languages', async ({ page }) => {

@@ -1,7 +1,8 @@
 ---
-// The language switcher: FR · EN · PT, only the published languages, generated at build time, no JS.
-// Each link leads to the same page in the other language and gives screen readers the full name.
-// The current language is marked and is not a link. No flags.
+// The language switcher: only the published languages, generated at build time, no JS.
+// In the header, the current language opens a `<details>` menu of the other languages; in the phone
+// menu, all the languages sit in a row. Each link leads to the same page in the other language and
+// gives screen readers the full name. The current language is marked and is not a link. No flags.
 import { HTML_CODES, PHASE, LANGUAGE_NAMES, type Language } from '../config/site';
 import { pathInLanguage } from '../lib/paths';
 
@@ -9,54 +10,88 @@ interface Props {
 	language: Language;
 	/** The switcher's name, in the page's language. */
 	label: string;
-	/** In the mobile menu: larger letters and touch targets. */
-	large?: boolean;
+	/** In the phone menu: all the languages in a row, with larger letters and touch targets. */
+	inMenu?: boolean;
 	class?: string;
 }
 
-const { language, label, large = false, class: className } = Astro.props;
+const { language, label, inMenu = false, class: className } = Astro.props;
 const path = Astro.url.pathname;
-const tapTarget = large ? 'min-h-11 min-w-11' : 'min-h-7 min-w-7';
+const otherLanguages = PHASE.publishedLanguages.filter((l) => l !== language);
 ---
 
-<nav aria-label={label} class={className}>
-	<ul
-		class:list={['flex items-center tracking-[0.06em]', large ? 'text-base' : 'text-[0.8125rem]']}
-	>
-		{PHASE.publishedLanguages.map((l, i) => (
-			<li class="flex items-center">
-				{i > 0 && (
-					<span aria-hidden="true" class="px-0.5 text-foreground-secondary">
-						·
-					</span>
-				)}
-				{l === language ? (
-					<span
-						aria-current="true"
-						lang={HTML_CODES[l]}
-						class:list={[
-							tapTarget,
-							'inline-flex items-center justify-center text-foreground underline decoration-green decoration-2 underline-offset-4',
-						]}
-					>
-						{l.toUpperCase()}
-						<span class="sr-only">, {LANGUAGE_NAMES[l]}</span>
-					</span>
-				) : (
-					<a
-						href={pathInLanguage(path, language, l)}
-						hreflang={l}
-						lang={HTML_CODES[l]}
-						class:list={[
-							tapTarget,
-							'inline-flex items-center justify-center rounded-md text-foreground-secondary transition-colors hover:bg-surface-2 hover:text-foreground',
-						]}
-					>
-						{l.toUpperCase()}
-						<span class="sr-only">, {LANGUAGE_NAMES[l]}</span>
-					</a>
-				)}
-			</li>
-		))}
-	</ul>
-</nav>
+{inMenu ? (
+	<nav aria-label={label} class={className}>
+		<ul class="flex items-center text-base tracking-[0.06em]">
+			{PHASE.publishedLanguages.map((l, i) => (
+				<li class="flex items-center">
+					{i > 0 && (
+						<span aria-hidden="true" class="px-0.5 text-foreground-secondary">
+							·
+						</span>
+					)}
+					{l === language ? (
+						<span
+							aria-current="true"
+							lang={HTML_CODES[l]}
+							class="inline-flex min-h-11 min-w-11 items-center justify-center text-foreground underline decoration-green decoration-2 underline-offset-4"
+						>
+							{l.toUpperCase()}
+							<span class="sr-only">, {LANGUAGE_NAMES[l]}</span>
+						</span>
+					) : (
+						<a
+							href={pathInLanguage(path, language, l)}
+							hreflang={l}
+							lang={HTML_CODES[l]}
+							class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-foreground-secondary transition-colors hover:bg-surface-2 hover:text-foreground"
+						>
+							{l.toUpperCase()}
+							<span class="sr-only">, {LANGUAGE_NAMES[l]}</span>
+						</a>
+					)}
+				</li>
+			))}
+		</ul>
+	</nav>
+) : (
+	<nav aria-label={label} class={className}>
+		<details data-menu class="group relative">
+			<summary class="inline-flex min-h-11 cursor-pointer list-none items-center gap-1.5 rounded-lg px-3 text-[0.8125rem] tracking-[0.06em] text-foreground transition-colors group-open:bg-surface hover:bg-surface [&::-webkit-details-marker]:hidden">
+				<span aria-current="true" lang={HTML_CODES[language]}>
+					{language.toUpperCase()}
+					<span class="sr-only">, {LANGUAGE_NAMES[language]}</span>
+				</span>
+				<svg
+					width="12"
+					height="12"
+					viewBox="0 0 12 12"
+					aria-hidden="true"
+					class="transition-transform group-open:rotate-180"
+				>
+					<path
+						d="M2.5 4.5 6 8l3.5-3.5"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.6"
+					></path>
+				</svg>
+			</summary>
+			<ul class="absolute top-[calc(100%+0.5rem)] right-0 grid w-max gap-0.5 rounded-xl border border-line bg-surface p-2 text-[0.8125rem] tracking-[0.06em] shadow-[0_18px_40px_rgb(0_0_0/0.45)]">
+				{otherLanguages.map((l) => (
+					<li>
+						<a
+							href={pathInLanguage(path, language, l)}
+							hreflang={l}
+							lang={HTML_CODES[l]}
+							class="flex min-h-11 min-w-11 items-center justify-center rounded-lg px-3 text-foreground-secondary transition-colors hover:bg-surface-2 hover:text-foreground"
+						>
+							{l.toUpperCase()}
+							<span class="sr-only">, {LANGUAGE_NAMES[l]}</span>
+						</a>
+					</li>
+				))}
+			</ul>
+		</details>
+	</nav>
+)}
