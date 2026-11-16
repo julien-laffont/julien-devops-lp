@@ -87,6 +87,7 @@ const source = (url: string, read = READ): SovereigntySource => ({ url, read });
 // numérique en santé's list of certified health data hosts (HDS).
 const SECNUMCLOUD = source(
 	'https://messervices.cyber.gouv.fr/visas/catalogue-produits-services-profils-de-protection-sites-certifies-qualifies-agrees-anssi.pdf',
+	'2026-11-16',
 );
 const HDS = source('https://esante.gouv.fr/produits-services/hds/liste-des-hebergeurs-certifies');
 const hds: Certification = { name: 'HDS', level: 'company' };

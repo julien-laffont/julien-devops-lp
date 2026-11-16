@@ -143,7 +143,7 @@ const FR: Texts = {
 			'HDS ISO/IEC 27001',
 		],
 		notDisclosed: 'non communiqué',
-		read: 'Consultées le 13 nov. 2026',
+		read: 'Consultées le 13 nov. 2026, 16 nov. 2026',
 	},
 	notes: {
 		switzerland: [
@@ -194,7 +194,7 @@ const EXPECTED: Record<Language, Texts> = {
 				FR.table.aws[3],
 				FR.table.aws[4],
 			],
-			read: 'Consultées le Nov 13, 2026',
+			read: 'Consultées le Nov 13, 2026, Nov 16, 2026',
 		},
 		notes: {
 			switzerland: [
@@ -279,7 +279,7 @@ const EXPECTED: Record<Language, Texts> = {
 				'HDS ISO/IEC 27001',
 			],
 			notDisclosed: 'não divulgado',
-			read: 'Consultadas a 13/11/2026',
+			read: 'Consultadas a 13/11/2026, 16/11/2026',
 		},
 		notes: {
 			switzerland: [

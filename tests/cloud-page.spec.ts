@@ -5,6 +5,9 @@ import { expect, test, type Page } from '@playwright/test';
 import { inEachBuild } from './builds';
 import { BOOKING_PAGE, LANGUAGES, NAME, type Language } from './expected';
 
+const ANSSI_CATALOGUE =
+	'https://messervices.cyber.gouv.fr/visas/catalogue-produits-services-profils-de-protection-sites-certifies-qualifies-agrees-anssi.pdf';
+
 /** The page's texts, from Julien's document; English keeps the French ones until it is translated. */
 const FRENCH_PAGE = {
 	name: 'Choisir son cloud',
@@ -105,6 +108,8 @@ const EXPECTED: Record<
 		opinion: string;
 		/** The date the Azure sources were read, as the page writes it. */
 		read: string;
+		/** The date ANSSI's SecNumCloud catalogue was read, as the page writes it. */
+		catalogueRead: string;
 		/** AWS's note on its European offer, in the data sovereignty scenario. */
 		awsInEurope: string;
 	}
@@ -138,6 +143,7 @@ const EXPECTED: Record<
 		],
 		opinion: 'opinião do Julien',
 		read: '13/11/2026',
+		catalogueRead: '16/11/2026',
 		awsInEurope:
 			'Na Europa, a AWS European Sovereign Cloud está disponível desde janeiro de 2026, com uma região na Alemanha.',
 	},
@@ -169,6 +175,7 @@ const EXPECTED: Record<
 		],
 		opinion: 'avis de Julien',
 		read: '13 nov. 2026',
+		catalogueRead: '16 nov. 2026',
 		awsInEurope:
 			"En Europe, l'AWS European Sovereign Cloud est disponible depuis janvier 2026, avec une région en Allemagne.",
 	},
@@ -196,6 +203,7 @@ const EXPECTED: Record<
 		],
 		opinion: "Julien's opinion",
 		read: 'Nov 13, 2026',
+		catalogueRead: 'Nov 16, 2026',
 		awsInEurope:
 			"En Europe, l'AWS European Sovereign Cloud est disponible depuis janvier 2026, avec une région en Allemagne.",
 	},
@@ -331,6 +339,17 @@ inEachBuild((build) => {
 						'a[href="https://aws.amazon.com/blogs/aws/opening-the-aws-european-sovereign-cloud/"]',
 					),
 				).toHaveAccessibleName('aws.amazon.com');
+			});
+
+			test("the SecNumCloud facts give the day ANSSI's catalogue was read", async ({ page }) => {
+				await page.goto(path);
+				await scenario(page, language, SOVEREIGNTY).check();
+				await bars(page, language).nth(PROVIDERS.indexOf('AWS')).click();
+				const fact = detail(page, language, 'AWS')
+					.getByRole('listitem')
+					.filter({ has: page.locator(`a[href="${ANSSI_CATALOGUE}"]`) });
+				await expect(fact).toHaveCount(1);
+				await expect(fact).toContainText(expected.catalogueRead);
 			});
 
 			test("the cost criterion is marked as Julien's opinion, the facts are not", async ({

@@ -71,6 +71,7 @@ const source = (url: string, read = VERIFIED): Source => ({ url, read });
 // The ANSSI's lists: the catalogue of qualified offers, and the offers being qualified.
 const SECNUMCLOUD_CATALOGUE = source(
 	'https://messervices.cyber.gouv.fr/visas/catalogue-produits-services-profils-de-protection-sites-certifies-qualifies-agrees-anssi.pdf',
+	'2026-11-16',
 );
 // The page blocks automated reading: what was read is its Internet Archive copy of that day.
 const SECNUMCLOUD_IN_QUALIFICATION = source(
