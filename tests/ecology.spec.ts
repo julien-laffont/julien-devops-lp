@@ -589,21 +589,23 @@ inEachBuild((build) => {
 	}
 });
 
-// The home page's Ecology section: a short text and the link. The texts are Julien's, in French;
-// English keeps them until it is translated.
-const FRENCH_HOME = {
-	title: "Un cloud plus efficace, c'est aussi un numérique plus responsable.",
-	text: "Le choix du datacenter, l'architecture et la qualité du code influencent la consommation de ressources. Compare les solutions, découvre les données disponibles et comprends comment réduire les dépenses inutiles et l'empreinte de ton application.",
-	link: "Explorer l'impact environnemental",
-};
+// The home page's Ecology section: a short text and the link. The texts are Julien's, in French.
 const HOME: Record<Language, { title: string; text: string; link: string }> = {
 	pt: {
 		title: 'Uma cloud mais eficiente é também um digital mais responsável.',
 		text: 'A escolha do centro de dados, a arquitetura e a qualidade do código influenciam o consumo de recursos. Compara as soluções, descobre os dados disponíveis e percebe como reduzir as despesas desnecessárias e a pegada da tua aplicação.',
 		link: 'Explorar o impacto ambiental',
 	},
-	fr: FRENCH_HOME,
-	en: FRENCH_HOME,
+	fr: {
+		title: "Un cloud plus efficace, c'est aussi un numérique plus responsable.",
+		text: "Le choix du datacenter, l'architecture et la qualité du code influencent la consommation de ressources. Compare les solutions, découvre les données disponibles et comprends comment réduire les dépenses inutiles et l'empreinte de ton application.",
+		link: "Explorer l'impact environnemental",
+	},
+	en: {
+		title: 'A more efficient cloud also means a more responsible digital footprint.',
+		text: "The choice of data centre, the architecture and the quality of the code all affect resource consumption. Compare the options, explore the available data and understand how to reduce unnecessary spending and your application's footprint.",
+		link: 'Explore the environmental impact',
+	},
 };
 
 inEachBuild((build) => {

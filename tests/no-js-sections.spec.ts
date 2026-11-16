@@ -7,7 +7,6 @@ import { LANGUAGES, LINKEDIN, MALT, NAME, BOOKING_PAGE, type Language } from './
 // The expected values, taken from the spec (#54). In Portuguese, the approved texts are exactly as
 // the spec gives them; French and English are translations the intern reviews before the Commercial
 // launch (#75). The booking page is in French: the notice only appears in the other languages.
-// The new offer's texts are Julien's, in French; English keeps them until it is translated.
 const FRENCH = {
 	whoItsFor: {
 		title: 'Pour qui ?',
@@ -144,20 +143,64 @@ const EXPECTED = {
 		finalCta: { ...FRENCH.finalCta, bookingNotice: undefined },
 	},
 	en: {
-		whoItsFor: FRENCH.whoItsFor,
-		todayAndAfter: FRENCH.todayAndAfter,
-		availability: {
-			...FRENCH.availability,
-			levels: [
-				'99.5% Disponibilité essentielle',
-				'99.9% Disponibilité renforcée',
-				'99.95% Haute disponibilité',
-				'99.99% Disponibilité très élevée',
+		whoItsFor: {
+			title: 'Who is it for?',
+			intro:
+				'Are you building a SaaS or a web application, on your own or with a team? I adapt to your stage of development, your organisation and your technical constraints.',
+			situations: [
+				'You are preparing a launch and want to start on solid foundations.',
+				'Your product is already live, and bugs or maintenance are slowing down new features.',
+				'You expect your load to grow and want to avoid unpleasant surprises.',
+			],
+			button: "Let's talk about your project",
+		},
+		todayAndAfter: {
+			title: 'Today… and after.',
+			lists: ['Today', 'After'],
+			items: [
+				[
+					'A new feature breaks another one, and your customers are the ones who find the regressions.',
+					'Your developers spend too much time on bugs, fixes and support.',
+					'Outdated code piles up, dependencies age and performance degrades.',
+					'Tests and deployments still rely on manual checks.',
+					'You lack visibility into the real state of your application and its ability to handle more load.',
+				],
+				[
+					'Regressions are caught earlier, thanks to automated checks.',
+					'The priority fixes and optimisations make your code easier to maintain.',
+					'Part of the repetitive maintenance is automated, to free up development time.',
+					'Deployments are more predictable, and the infrastructure adapts to the expected load.',
+					'You have metrics and alerts to detect incidents as early as possible.',
+				],
 			],
 		},
-		about: { ...FRENCH.about, linkedin: 'See my LinkedIn profile', malt: 'See my Malt profile' },
+		availability: {
+			label: 'Availability & reliability',
+			title: 'Reliable infrastructure, built to last.',
+			text: "Depending on your SaaS's needs, I design and test infrastructure that aims for an availability objective we set together: 99.5%, 99.9%, 99.95% or more when the architecture justifies it. The right level depends on your business, the services used and your budget.",
+			guarantee:
+				'For a complete intervention covering the four blocks, I offer a three-month technical conformity guarantee after delivery: if a design or configuration defect that comes from my work is found, I take care of fixing it under the conditions agreed in the contract. It is neither round-the-clock on-call support nor a guarantee that the application will never fail.',
+			link: 'Understand the availability levels and read the conditions',
+			levels: [
+				'99.5% Essential availability',
+				'99.9% Enhanced availability',
+				'99.95% High availability',
+				'99.99% Very high availability',
+			],
+			pageHeading: 'What level of availability for your SaaS?',
+		},
+		about: {
+			title: 'Who is Julien?',
+			wayOfWorking:
+				'I can work on your project in French, English or Portuguese. I use modern, proven technologies, keep dependence on any one provider as low as possible and document what I deliver, so your team stays self-sufficient. My solutions adapt to your technical and business constraints, not the other way round.',
+			linkedin: 'See my LinkedIn profile',
+			malt: 'See my Malt profile',
+		},
 		finalCta: {
-			...FRENCH.finalCta,
+			title: 'Your SaaS deserves better than emergency fixes.',
+			text: "Already have a project in mind, or just questions about your code, your infrastructure or your next deployment? Let's talk. A first conversation is enough to identify the priorities and see how I can help.",
+			button: 'Book a free conversation',
+			conversation: '45 minutes on Google Meet. No commitment.',
 			bookingNotice:
 				'The booking page is in French, but the conversation can be in English or Portuguese.',
 		},

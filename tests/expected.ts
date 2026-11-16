@@ -1,6 +1,5 @@
 // The expected values, taken from the specs (#54, #129) and not from the code.
-// The button and the pause button names in English are translations the intern reviews before the
-// Commercial launch (#75); until then, the English Designation and Promise are the French ones.
+// The English texts are translations the intern reviews before the Commercial launch (#75).
 
 export const SITE = 'https://devops.julienlaffont.com';
 export const BOOKING_PAGE = 'https://calendly.com/contact-julienlaffont/appel-cadrage';
@@ -29,8 +28,8 @@ export const LANGUAGES = {
 		name: 'English',
 		prefix: '/en/',
 		htmlCode: 'en',
-		designation: 'Consultant DevOps',
-		promise: 'Moins de bugs. Un code plus propre. Un SaaS prêt à grandir.',
+		designation: 'DevOps consultant',
+		promise: 'Fewer bugs. Cleaner code. A SaaS ready to grow.',
 		button: 'Book a conversation',
 		pause: 'Pause animation',
 		resume: 'Resume animation',

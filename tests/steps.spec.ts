@@ -5,7 +5,7 @@ import { expect, test, type Locator, type Page } from '@playwright/test';
 import { inEachBuild } from './builds';
 import { LANGUAGES, type Language } from './expected';
 
-// French is Julien's text, Portuguese its translation; English shows the French until it is translated.
+// French is Julien's text, English and Portuguese its translations.
 const FRENCH = {
 	title: 'Cinq étapes pour avancer sereinement.',
 	steps: [
@@ -58,7 +58,31 @@ const EXPECTED: Record<Language, { title: string; steps: [string, string][] }> =
 		],
 	},
 	fr: FRENCH,
-	en: FRENCH,
+	en: {
+		title: 'Five steps to move forward with peace of mind.',
+		steps: [
+			[
+				'Initial conversation',
+				'45 minutes on Google Meet to understand your product, your priorities and your constraints. Free, with no commitment.',
+			],
+			[
+				'Diagnosis',
+				'A free first review of your code and, if needed, of your infrastructure. Feedback within 3 to 5 business days of receiving the access needed.',
+			],
+			[
+				'Intervention proposal',
+				'A precise scope, priorities, a schedule and a price, agreed before we start.',
+			],
+			[
+				'Implementation',
+				'I work alongside your team, keeping disruption to development to a minimum. A regular progress meeting, normally every week, keeps track of the actions and decisions.',
+			],
+			[
+				'Delivery & handover',
+				'Documentation, final checks and knowledge transfer, so your team stays self-sufficient.',
+			],
+		],
+	},
 };
 
 /** Unpinned, the branch's tip follows the line at 62 % of the screen. */

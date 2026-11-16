@@ -1,24 +1,24 @@
 // Typed from French, the Reference language. A text still in French waits for its translation.
 import type { Dictionary } from './fr';
 
-const promise = 'Moins de bugs. Un code plus propre. Un SaaS prêt à grandir.';
+const promise = 'Fewer bugs. Cleaner code. A SaaS ready to grow.';
 
 export const en: Dictionary = {
-	designation: 'Consultant DevOps',
+	designation: 'DevOps consultant',
 	promise,
 	bookButton: 'Book a conversation',
 	header: {
 		logoTarget: 'home page',
 		languages: 'Language',
 		menu: 'Menu',
-		resources: 'Ressources',
+		resources: 'Resources',
 	},
 	animation: {
 		pause: 'Pause animation',
 		resume: 'Resume animation',
 	},
 	cloud: {
-		link: 'Choisir son cloud',
+		link: 'Choosing a cloud',
 		page: {
 			title: 'Quel cloud choisir pour ton entreprise ?',
 			description:
@@ -149,9 +149,9 @@ export const en: Dictionary = {
 	ecology: {
 		link: 'Ecology',
 		home: {
-			title: "Un cloud plus efficace, c'est aussi un numérique plus responsable.",
-			text: "Le choix du datacenter, l'architecture et la qualité du code influencent la consommation de ressources. Compare les solutions, découvre les données disponibles et comprends comment réduire les dépenses inutiles et l'empreinte de ton application.",
-			link: "Explorer l'impact environnemental",
+			title: 'A more efficient cloud also means a more responsible digital footprint.',
+			text: "The choice of data centre, the architecture and the quality of the code all affect resource consumption. Compare the options, explore the available data and understand how to reduce unnecessary spending and your application's footprint.",
+			link: 'Explore the environmental impact',
 		},
 		page: {
 			title: 'Ecology and infrastructure',
@@ -257,7 +257,7 @@ export const en: Dictionary = {
 		back: 'Back to the home page',
 	},
 	sovereignty: {
-		link: 'Souveraineté des données',
+		link: 'Data sovereignty',
 		description:
 			'Héberger une application en Europe ne suffit pas à comprendre où circulent les données. La souveraineté se construit par des choix techniques, contractuels et organisationnels.',
 		title: 'Tes données sont-elles vraiment sous ton contrôle ?',
@@ -354,10 +354,10 @@ export const en: Dictionary = {
 		},
 	},
 	availability: {
-		link: 'Disponibilité & conditions',
+		link: 'Availability & conditions',
 		description:
 			"Compare les niveaux de disponibilité, calcule ton temps d'indisponibilité théorique et consulte les conditions de la garantie de conformité.",
-		heading: 'Quel niveau de disponibilité pour ton SaaS ?',
+		heading: 'What level of availability for your SaaS?',
 		intro:
 			"Un objectif de disponibilité se choisit selon l'impact réel d'une interruption sur ton activité. Plus l'objectif est élevé, plus l'architecture, la redondance et l'exploitation peuvent devenir exigeantes et coûteuses. Compare les niveaux avant de décider.",
 		calculator: {
@@ -375,19 +375,19 @@ export const en: Dictionary = {
 		},
 		levels: {
 			essential: {
-				title: 'Disponibilité essentielle',
+				title: 'Essential availability',
 				text: 'Pour une application qui peut tolérer des interruptions occasionnelles. Une infrastructure simple peut suffire selon les dépendances et les risques acceptés.',
 			},
 			reinforced: {
-				title: 'Disponibilité renforcée',
+				title: 'Enhanced availability',
 				text: 'Pour réduire les interruptions et mieux sécuriser les services critiques. La supervision et la limitation des points uniques de défaillance deviennent prioritaires.',
 			},
 			high: {
-				title: 'Haute disponibilité',
+				title: 'High availability',
 				text: 'Pour des services où une interruption prolongée a un impact important. Une redondance adaptée, des mécanismes de bascule et des tests de reprise peuvent être nécessaires.',
 			},
 			veryHigh: {
-				title: 'Disponibilité très élevée',
+				title: 'Very high availability',
 				text: "Pour des usages particulièrement sensibles aux interruptions. L'architecture et les procédures d'exploitation doivent être étudiées au cas par cas.",
 			},
 		},
@@ -456,85 +456,85 @@ export const en: Dictionary = {
 		button: "Définissons l'objectif de disponibilité adapté à ton projet",
 	},
 	homePage: {
-		description: `${promise} J'automatise la qualité du code, je réduis la dette technique et je construis une infrastructure capable de suivre ta croissance.`,
+		description: `${promise} I automate code quality, reduce technical debt and build infrastructure that can keep up with your growth.`,
 		hero: {
 			support:
-				"J'automatise la qualité du code, je réduis la dette technique et je construis une infrastructure capable de suivre ta croissance. Tes développeurs passent moins de temps à corriger les problèmes, et plus de temps à faire évoluer ton produit.",
-			note: '45 min sur Google Meet. Gratuit et sans engagement.',
+				'I automate code quality, reduce technical debt and build infrastructure that can keep up with your growth. Your developers spend less time fixing problems, and more time moving your product forward.',
+			note: '45 min on Google Meet. Free, with no commitment.',
 		},
 		whoItsFor: {
-			title: 'Pour qui ?',
+			title: 'Who is it for?',
 			intro:
-				"Tu développes un SaaS ou une application web, seul ou avec une équipe ? Je m'adapte à ton stade de développement, à ton organisation et à tes contraintes techniques.",
+				'Are you building a SaaS or a web application, on your own or with a team? I adapt to your stage of development, your organisation and your technical constraints.',
 			situations: [
-				'Tu prépares un lancement et tu veux partir sur des bases solides.',
-				'Ton produit est déjà en ligne et les bugs ou la maintenance ralentissent les nouveautés.',
-				'Tu anticipes une montée en charge et tu veux éviter les mauvaises surprises.',
+				'You are preparing a launch and want to start on solid foundations.',
+				'Your product is already live, and bugs or maintenance are slowing down new features.',
+				'You expect your load to grow and want to avoid unpleasant surprises.',
 			],
-			button: 'Parlons de ton projet',
+			button: "Let's talk about your project",
 		},
 		todayAndAfter: {
-			title: "Aujourd'hui… et après.",
-			todayTitle: "Aujourd'hui",
+			title: 'Today… and after.',
+			todayTitle: 'Today',
 			today: [
-				'Une nouvelle fonctionnalité en casse une autre, et les clients découvrent les régressions.',
-				'Tes développeurs passent trop de temps sur les bugs, les correctifs et le support.',
-				"Le code obsolète s'accumule, les dépendances vieillissent et les performances se dégradent.",
-				'Les tests et les déploiements reposent encore sur des vérifications manuelles.',
-				"Tu manques de visibilité sur l'état réel de ton application et sur sa capacité à monter en charge.",
+				'A new feature breaks another one, and your customers are the ones who find the regressions.',
+				'Your developers spend too much time on bugs, fixes and support.',
+				'Outdated code piles up, dependencies age and performance degrades.',
+				'Tests and deployments still rely on manual checks.',
+				'You lack visibility into the real state of your application and its ability to handle more load.',
 			],
-			afterTitle: 'Après',
+			afterTitle: 'After',
 			after: [
-				'Les régressions sont détectées plus tôt grâce aux contrôles automatisés.',
-				'Les corrections et les optimisations prioritaires rendent ton code plus maintenable.',
-				'Une partie de la maintenance répétitive est automatisée, pour libérer du temps de développement.',
-				"Les déploiements sont plus prévisibles et l'infrastructure s'adapte à la charge prévue.",
-				"Tu disposes d'indicateurs et d'alertes pour détecter les incidents au plus tôt.",
+				'Regressions are caught earlier, thanks to automated checks.',
+				'The priority fixes and optimisations make your code easier to maintain.',
+				'Part of the repetitive maintenance is automated, to free up development time.',
+				'Deployments are more predictable, and the infrastructure adapts to the expected load.',
+				'You have metrics and alerts to detect incidents as early as possible.',
 			],
 		},
 		services: {
 			label: 'Services',
-			title: 'Quatre leviers pour fiabiliser et faire grandir ton SaaS.',
+			title: 'Four levers to make your SaaS reliable and help it grow.',
 			intro:
-				"De la qualité du code à la supervision en production, j'interviens sur les points qui freinent ton équipe. Après un diagnostic, nous définissons ensemble le périmètre, les priorités et l'ordre des interventions. Tu peux me confier un besoin ciblé ou un projet complet.",
+				'From code quality to monitoring in production, I work on the points that slow your team down. After a diagnosis, we define the scope, the priorities and the order of the work together. You can hand me a specific need or a complete project.',
 			blockLabel: 'Block',
-			toolsLabel: 'Domaines et outils',
+			toolsLabel: 'Areas and tools',
 			blocks: [
 				{
-					name: 'Audit du code & CI/CD',
-					summary: "Détecte les problèmes avant qu'ils n'arrivent en production.",
-					text: "J'analyse le dépôt et les processus de livraison, puis je mets en place une pipeline adaptée à ton projet : qualité du code, lint, tests automatisés, analyse de sécurité et contrôles des dépendances. Les erreurs sont signalées dès la pull request, avant de devenir des incidents chez tes clients.",
+					name: 'Code audit & CI/CD',
+					summary: 'Catch problems before they reach production.',
+					text: 'I analyse the repository and the delivery processes, then set up a pipeline suited to your project: code quality, linting, automated tests, security scanning and dependency checks. Errors are flagged in the pull request, before they become incidents for your customers.',
 					tools: [
 						'GitHub Actions',
 						'GitLab CI',
 						'Lint',
-						'Tests unitaires',
-						"Tests d'intégration",
-						'Tests E2E',
+						'Unit tests',
+						'Integration tests',
+						'E2E tests',
 						'SonarQube',
 						'Trivy',
 						'Gitleaks',
 					],
-					toolsAlternative: 'Et plus selon la stack',
+					toolsAlternative: 'And more, depending on the stack',
 				},
 				{
-					name: 'Nettoyage & optimisation du code',
-					summary: 'Moins de dette technique, plus de temps pour développer.',
-					text: "Je prends directement en charge les corrections applicatives, le refactoring du code et les optimisations de performances identifiés comme prioritaires. J'automatise également une partie de la maintenance répétitive. L'objectif : rendre l'application plus propre, plus rapide et plus simple à faire évoluer. Le volume d'intervention est défini après l'audit : il ne s'agit pas d'une refonte illimitée de tout le code.",
+					name: 'Code cleanup & optimisation',
+					summary: 'Less technical debt, more time for development.',
+					text: 'I take on the application fixes, the refactoring and the performance optimisations identified as priorities myself. I also automate part of the repetitive maintenance. The goal: a cleaner, faster application that is simpler to evolve. The amount of work is set after the audit: it is not an unlimited rewrite of the whole codebase.',
 					tools: [
 						'Refactoring',
-						'Dette technique',
-						'Performances',
-						'API & requêtes',
-						'Dépendances',
-						'Maintenance automatisée',
+						'Technical debt',
+						'Performance',
+						'APIs & queries',
+						'Dependencies',
+						'Automated maintenance',
 					],
-					toolsAlternative: 'Selon la stack',
+					toolsAlternative: 'Depending on the stack',
 				},
 				{
-					name: 'Infrastructure scalable',
-					summary: 'La bonne architecture pour ton usage, pas de complexité inutile.',
-					text: "Je conteneurise l'application lorsque c'est nécessaire et je choisis l'hébergement adapté à sa charge : conteneurs managés, services serverless ou Kubernetes. L'Infrastructure as Code permet de décrire, versionner et reproduire les environnements. L'objectif est de pouvoir évoluer sans surdimensionner l'infrastructure dès le départ.",
+					name: 'Scalable infrastructure',
+					summary: 'The right architecture for your use, with no needless complexity.',
+					text: 'I containerise the application when it is needed and choose the hosting suited to its load: managed containers, serverless services or Kubernetes. Infrastructure as Code describes, versions and reproduces the environments. The goal is to be able to grow without oversizing the infrastructure from the start.',
 					tools: [
 						'Docker',
 						'Containers as a Service',
@@ -547,14 +547,14 @@ export const en: Dictionary = {
 						'OVHcloud',
 						'Infomaniak',
 					],
-					toolsAlternative: 'Et autres fournisseurs',
+					toolsAlternative: 'And other providers',
 				},
 				{
-					name: 'Observabilité',
-					summary: 'Ne découvre plus les incidents par tes clients.',
-					text: "Je mets en place les métriques, journaux, tableaux de bord et alertes nécessaires pour suivre la santé de l'application et de son infrastructure. Au lieu de vérifier manuellement si tout fonctionne, ton équipe est avertie dès qu'un problème détectable apparaît et dispose des informations nécessaires pour intervenir.",
-					tools: ['Grafana', 'Prometheus', 'Logs', 'Alertes', 'Monitoring', 'Tracing'],
-					toolsAlternative: 'Outils natifs du cloud',
+					name: 'Observability',
+					summary: 'Stop finding out about incidents from your customers.',
+					text: 'I set up the metrics, logs, dashboards and alerts needed to follow the health of the application and its infrastructure. Instead of checking by hand that everything works, your team is warned as soon as a detectable problem appears, and has the information it needs to act.',
+					tools: ['Grafana', 'Prometheus', 'Logs', 'Alerts', 'Monitoring', 'Tracing'],
+					toolsAlternative: 'Cloud-native tools',
 				},
 			],
 			diagrams: {
@@ -568,10 +568,10 @@ export const en: Dictionary = {
 				},
 				cleanup: {
 					description:
-						'Un bug et du code en double disparaissent : le code raccourcit et le temps de réponse baisse.',
+						'A bug and duplicated code disappear: the code gets shorter and the response time drops.',
 					bug: 'bug',
 					duplicate: '×2',
-					responseTime: 'temps de réponse',
+					responseTime: 'response time',
 				},
 				scaling: {
 					description: 'The instances increase with the load, then decrease again.',
@@ -586,47 +586,46 @@ export const en: Dictionary = {
 			},
 		},
 		steps: {
-			title: 'Cinq étapes pour avancer sereinement.',
+			title: 'Five steps to move forward with peace of mind.',
 			steps: [
 				{
-					name: 'Échange initial',
+					name: 'Initial conversation',
 					sentence:
-						'45 minutes sur Google Meet pour comprendre ton produit, tes priorités et tes contraintes. Gratuit, sans engagement.',
+						'45 minutes on Google Meet to understand your product, your priorities and your constraints. Free, with no commitment.',
 				},
 				{
-					name: 'Diagnostic',
+					name: 'Diagnosis',
 					sentence:
-						'Un premier état des lieux gratuit de ton code et, si nécessaire, de ton infrastructure. Retour sous 3 à 5 jours ouvrés après réception des accès utiles.',
+						'A free first review of your code and, if needed, of your infrastructure. Feedback within 3 to 5 business days of receiving the access needed.',
 				},
 				{
-					name: "Proposition d'intervention",
-					sentence:
-						'Un périmètre précis, des priorités, un calendrier et un prix convenus avant de commencer.',
+					name: 'Intervention proposal',
+					sentence: 'A precise scope, priorities, a schedule and a price, agreed before we start.',
 				},
 				{
-					name: 'Mise en œuvre',
+					name: 'Implementation',
 					sentence:
-						"J'interviens avec ton équipe, en limitant les perturbations du développement. Un point d'avancement régulier, en principe chaque semaine, permet de suivre les actions et les décisions.",
+						'I work alongside your team, keeping disruption to development to a minimum. A regular progress meeting, normally every week, keeps track of the actions and decisions.',
 				},
 				{
-					name: 'Livraison & passation',
+					name: 'Delivery & handover',
 					sentence:
-						'Documentation, vérifications finales et transfert de connaissances pour que ton équipe reste autonome.',
+						'Documentation, final checks and knowledge transfer, so your team stays self-sufficient.',
 				},
 			],
 		},
 		availability: {
-			label: 'Disponibilité & fiabilité',
-			title: 'Une infrastructure fiable, conçue pour durer.',
-			text: "Selon les besoins de ton SaaS, je conçois et teste une infrastructure visant un objectif de disponibilité défini ensemble : 99,5 %, 99,9 %, 99,95 % ou davantage lorsque l'architecture le justifie. Le bon niveau dépend de ton activité, des services utilisés et de ton budget.",
+			label: 'Availability & reliability',
+			title: 'Reliable infrastructure, built to last.',
+			text: "Depending on your SaaS's needs, I design and test infrastructure that aims for an availability objective we set together: 99.5%, 99.9%, 99.95% or more when the architecture justifies it. The right level depends on your business, the services used and your budget.",
 			guarantee:
-				"Pour une intervention complète couvrant les quatre blocs, je propose une garantie de conformité technique de trois mois après la livraison : si un défaut de conception ou de configuration relevant de mon intervention est constaté, je prends en charge sa correction dans les conditions convenues au contrat. Il ne s'agit pas d'une astreinte 24 h/24 ni d'une garantie d'absence de panne applicative.",
-			link: 'Comprendre les niveaux de disponibilité et consulter les conditions',
+				'For a complete intervention covering the four blocks, I offer a three-month technical conformity guarantee after delivery: if a design or configuration defect that comes from my work is found, I take care of fixing it under the conditions agreed in the contract. It is neither round-the-clock on-call support nor a guarantee that the application will never fail.',
+			link: 'Understand the availability levels and read the conditions',
 		},
 		about: {
-			title: 'Qui est Julien ?',
+			title: 'Who is Julien?',
 			wayOfWorking:
-				"J'interviens sur ton projet en français, en anglais ou en portugais. J'utilise des technologies modernes et éprouvées, je limite autant que possible la dépendance à un fournisseur et je documente ce que je livre pour que ton équipe reste autonome. Mes solutions s'adaptent à tes contraintes techniques et métier, pas l'inverse.",
+				'I can work on your project in French, English or Portuguese. I use modern, proven technologies, keep dependence on any one provider as low as possible and document what I deliver, so your team stays self-sufficient. My solutions adapt to your technical and business constraints, not the other way round.',
 			linkedin: 'See my LinkedIn profile',
 			malt: 'See my Malt profile',
 		},
@@ -642,10 +641,10 @@ export const en: Dictionary = {
 			malt: 'View on Malt',
 		},
 		finalCta: {
-			title: 'Ton SaaS mérite mieux que des correctifs en urgence.',
-			text: "Tu as déjà un projet en tête, ou simplement des questions sur ton code, ton infrastructure ou ton prochain déploiement ? Parlons-en. Un premier échange suffit pour identifier les priorités et voir comment je peux t'aider.",
-			button: 'Réserver un échange gratuit',
-			conversation: '45 minutes sur Google Meet. Sans engagement.',
+			title: 'Your SaaS deserves better than emergency fixes.',
+			text: "Already have a project in mind, or just questions about your code, your infrastructure or your next deployment? Let's talk. A first conversation is enough to identify the priorities and see how I can help.",
+			button: 'Book a free conversation',
+			conversation: '45 minutes on Google Meet. No commitment.',
 			bookingNotice:
 				'The booking page is in French, but the conversation can be in English or Portuguese.',
 		},
