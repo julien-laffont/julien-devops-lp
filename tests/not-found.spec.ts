@@ -37,7 +37,7 @@ inEachBuild((build) => {
 		}
 	});
 
-	test('the 404 header has the logo and no language switcher, LinkedIn or menu', async ({
+	test('the 404 header has the logo and no language switcher, LinkedIn, Malt or menu', async ({
 		page,
 	}) => {
 		await page.goto(missingPaths[0]);
@@ -51,6 +51,7 @@ inEachBuild((build) => {
 			await expect(header.getByText(name)).toHaveCount(0);
 		}
 		await expect(header.getByRole('link', { name: 'LinkedIn' })).toHaveCount(0);
+		await expect(header.getByRole('link', { name: 'Malt' })).toHaveCount(0);
 		// The phone menu would only hold the languages: the button that opens it (the `<summary>`) does not exist.
 		await expect(header.locator('summary')).toHaveCount(0);
 	});
