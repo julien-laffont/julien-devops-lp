@@ -660,29 +660,29 @@ export const en: Dictionary = {
 				description: 'For anyone evaluating the service.',
 				questions: [
 					{
-						question: 'Que fais-tu, exactement ?',
+						question: 'What exactly do you do?',
 						answer:
-							"J'interviens sur quatre domaines : audit et CI/CD, nettoyage et optimisation du code, infrastructure scalable et observabilité. L'objectif est de réduire les problèmes récurrents et de permettre à l'application de grandir sur des bases plus solides. Le périmètre de chaque mission est défini après diagnostic.",
+							'I work in four areas: audit and CI/CD, code cleanup and optimisation, scalable infrastructure and observability. The goal is to reduce recurring problems and let the application grow on more solid foundations. The scope of each engagement is set after the diagnosis.',
 					},
 					{
-						question: 'Combien de temps ça prend ?',
+						question: 'How long does it take?',
 						answer:
-							"Cela dépend de l'état du code, des services existants et des travaux prioritaires. Après le diagnostic, je propose un calendrier réaliste, avec des étapes et des livrables précis. Il n'y a pas de promesse artificielle de tout réaliser en 30 jours.",
+							'It depends on the state of the code, the existing services and the priority work. After the diagnosis, I propose a realistic schedule, with precise steps and deliverables. There is no artificial promise to get everything done in 30 days.',
 					},
 					{
-						question: 'Combien ça coûte ?',
+						question: 'How much does it cost?',
 						answer:
-							"Le prix est défini à partir du périmètre convenu après un premier diagnostic gratuit. La proposition distingue mes honoraires des éventuels coûts récurrents de cloud et d'outils.",
+							'The price is set from the scope agreed after a free first diagnosis. The proposal keeps my fees separate from any recurring cloud and tool costs.',
 					},
 					{
-						question: 'Comment ça commence ?',
+						question: 'How does it start?',
 						answer:
-							"Nous commençons par un échange gratuit de 45 minutes. Viennent ensuite le diagnostic, la proposition d'intervention, la mise en œuvre avec des points d'avancement réguliers, puis la livraison et la passation à ton équipe.",
+							'We start with a free 45-minute conversation. Then come the diagnosis, the intervention proposal, the implementation with regular progress meetings, and finally the delivery and handover to your team.',
 					},
 					{
-						question: 'Puis-je choisir seulement certains blocs ?',
+						question: 'Can I choose only some of the blocks?',
 						answer:
-							"Oui, je peux intervenir sur un besoin ciblé. L'ordre et les dépendances techniques sont déterminés après diagnostic. La garantie de conformité technique de trois mois présentée sur ce site concerne uniquement les prestations complètes couvrant les quatre blocs.",
+							'Yes, I can work on a specific need. The order and the technical dependencies are set after the diagnosis. The three-month technical conformity guarantee presented on this site applies only to complete engagements covering the four blocks.',
 					},
 				],
 			},
@@ -693,39 +693,39 @@ export const en: Dictionary = {
 					'Infrastructure, CI/CD, testing, scaling, reliability, observability and working with the team.',
 				questions: [
 					{
-						question: 'Qui écrit les tests ?',
+						question: 'Who writes the tests?',
 						answer:
-							"Je mets en place et j'améliore l'automatisation des contrôles. Lorsque des tests ou des corrections de code sont nécessaires, nous décidons ensemble qui les réalise et dans quel périmètre. Dans le bloc d'optimisation, je peux écrire ou adapter les tests liés aux modifications que je prends en charge.",
+							'I set up and improve the automation of the checks. When tests or code fixes are needed, we decide together who does them and within what scope. In the optimisation block, I can write or adapt the tests related to the changes I take on.',
 					},
 					{
-						question: "Faut-il arrêter le développement pendant l'intervention ?",
+						question: 'Does development have to stop during the intervention?',
 						answer:
-							"En principe non. Le travail est organisé avec des branches, des environnements adaptés et des validations progressives. Certaines migrations ou modifications critiques peuvent exiger une fenêtre de changement planifiée avec l'équipe.",
+							'Normally not. The work is organised with branches, suitable environments and gradual approvals. Some migrations or critical changes may need a change window planned with the team.',
 					},
 					{
-						question: 'Avec quelles stacks et quels clouds travailles-tu ?',
+						question: 'Which stacks and clouds do you work with?',
 						answer:
-							"J'utilise notamment GitHub Actions, GitLab CI, Terraform, Docker, Kubernetes, Grafana et les services natifs des clouds. Je travaille avec AWS, Google Cloud, Azure, Scaleway, OVHcloud et d'autres fournisseurs selon le projet. Les outils sont choisis en fonction du contexte, pas imposés à l'avance.",
+							"I use GitHub Actions, GitLab CI, Terraform, Docker, Kubernetes, Grafana and the clouds' native services, among others. I work with AWS, Google Cloud, Azure, Scaleway, OVHcloud and other providers, depending on the project. The tools are chosen for the context, not imposed in advance.",
 					},
 					{
-						question: 'De quels accès as-tu besoin ?',
+						question: 'What access do you need?',
 						answer:
-							"Pour le diagnostic, des accès en lecture au code et, si nécessaire, aux métriques et à la configuration cloud. Pour l'implémentation, des droits adaptés aux opérations convenues. Je privilégie des accès nominatifs, limités au strict nécessaire et révocables à la fin de la mission. Il n'est pas nécessaire de partager des mots de passe ou des clés privées.",
+							'For the diagnosis, read access to the code and, if needed, to the metrics and the cloud configuration. For the implementation, permissions suited to the agreed operations. I prefer personal access, limited to what is strictly necessary and revoked at the end of the engagement. There is no need to share passwords or private keys.',
 					},
 					{
-						question: 'Que couvre la garantie de trois mois ?',
+						question: 'What does the three-month guarantee cover?',
 						answer:
-							"Pour une prestation complète couvrant les quatre blocs, elle concerne les défauts de conception ou de configuration de l'infrastructure qui me sont imputables, selon les conditions contractuelles. L'objectif de disponibilité est défini avec le client. Il ne s'agit ni d'une garantie de zéro bug applicatif, ni d'une astreinte 24 h/24.",
+							'For a complete engagement covering the four blocks, it covers the infrastructure design or configuration defects attributable to me, under the contractual conditions. The availability objective is set with the client. It is neither a guarantee of zero application bugs nor round-the-clock on-call support.',
 					},
 					{
-						question: "Quels outils utilises-tu pour l'observabilité ?",
+						question: 'Which tools do you use for observability?',
 						answer:
-							"Selon le contexte, Grafana, Prometheus, des solutions de logs et de tracing, ou les outils de supervision natifs du fournisseur cloud. Le but est de disposer d'indicateurs utiles et d'alertes exploitables, plutôt que de multiplier les dashboards.",
+							"Depending on the context, Grafana, Prometheus, logging and tracing solutions, or the cloud provider's native monitoring tools. The aim is to have useful metrics and actionable alerts, rather than piling up dashboards.",
 					},
 					{
-						question: 'Comment travaillons-nous ensemble ?',
+						question: 'How do we work together?',
 						answer:
-							"J'échange directement avec les personnes concernées : CTO, tech lead, développeurs et responsable du projet. Nous organisons des points d'avancement réguliers, généralement chaque semaine, et nous documentons les décisions importantes.",
+							'I talk directly with the people involved: CTO, tech lead, developers and project owner. We hold regular progress meetings, usually every week, and we document the important decisions.',
 					},
 				],
 			},
@@ -735,34 +735,34 @@ export const en: Dictionary = {
 				description: 'Risks, costs, continuity, predictability and business impact.',
 				questions: [
 					{
-						question: "Quand connaîtrai-je le budget de l'intervention ?",
+						question: 'When will I know the budget for the intervention?',
 						answer:
-							'Après le diagnostic gratuit, tu reçois une proposition précisant les travaux, le calendrier et le prix de mon intervention. Les éventuels coûts mensuels des fournisseurs sont présentés séparément.',
+							'After the free diagnosis, you receive a proposal setting out the work, the schedule and the price of my intervention. Any monthly provider costs are presented separately.',
 					},
 					{
-						question: 'Combien coûtera le cloud ensuite ?',
+						question: 'How much will the cloud cost afterwards?',
 						answer:
-							"Le coût dépend de l'architecture, du trafic, des données, de la région et du niveau de disponibilité recherché. Je présente une estimation argumentée avant les décisions structurantes, avec les hypothèses et les principaux postes de dépenses.",
+							'The cost depends on the architecture, the traffic, the data, the region and the availability level you aim for. I present a reasoned estimate before the major decisions, with the assumptions and the main cost items.',
 					},
 					{
-						question: 'Mon entreprise va-t-elle dépendre de toi ?',
+						question: 'Will my company depend on you?',
 						answer:
-							"Mon objectif est l'inverse : je privilégie des technologies documentées, une infrastructure décrite comme du code et une passation claire. Les dépendances propres au fournisseur choisi sont expliquées dès la conception.",
+							'My goal is the opposite: I favour documented technologies, infrastructure described as code and a clear handover. The dependencies specific to the chosen provider are explained from the design stage.',
 					},
 					{
-						question: 'Y a-t-il un risque pour la production ?',
+						question: 'Is there a risk for production?',
 						answer:
-							"Toute intervention présente des risques, mais ils sont évalués avant l'exécution. Nous préparons les tests, les sauvegardes et, lorsque c'est pertinent, un plan de retour arrière. Les changements sensibles sont coordonnés avec ton équipe.",
+							'Every intervention carries risks, but they are assessed before anything is done. We prepare the tests, the backups and, when relevant, a rollback plan. Sensitive changes are coordinated with your team.',
 					},
 					{
-						question: 'Quel retour sur investissement puis-je attendre ?',
+						question: 'What return on investment can I expect?',
 						answer:
-							'Moins de temps perdu sur les incidents et les tâches répétitives, un code plus maintenable et des déploiements plus fiables. Les gains exacts dépendent de la situation de départ ; le diagnostic sert aussi à identifier les améliorations à plus forte valeur.',
+							'Less time lost on incidents and repetitive tasks, more maintainable code and more reliable deployments. The exact gains depend on the starting point; the diagnosis also serves to identify the improvements with the most value.',
 					},
 					{
-						question: 'Dans quelles langues travailles-tu ?',
+						question: 'Which languages do you work in?',
 						answer:
-							"Je peux intervenir en français, en anglais et en portugais, selon les besoins de l'équipe et du projet.",
+							'I can work in French, English and Portuguese, depending on the needs of the team and the project.',
 					},
 				],
 			},
@@ -773,47 +773,47 @@ export const en: Dictionary = {
 					'Devs and tech leads who will work with the pipeline and the new infrastructure.',
 				questions: [
 					{
-						question: "Qu'est-ce qui change au quotidien ?",
+						question: 'What changes day to day?',
 						answer:
-							"Des contrôles automatisés plus utiles, moins de tâches manuelles, une meilleure visibilité sur les problèmes et un code progressivement plus simple à maintenir. Les modifications de workflow sont préparées avec l'équipe, pas imposées sans discussion.",
+							'More useful automated checks, fewer manual tasks, better visibility into problems and code that gradually becomes simpler to maintain. Workflow changes are prepared with the team, not imposed without discussion.',
 					},
 					{
-						question: 'Qui maintient les pipelines après ton départ ?',
+						question: 'Who maintains the pipelines after you leave?',
 						answer:
-							'Ton équipe conserve les outils, les configurations et la documentation. Je prévois une passation pour que leur fonctionnement soit compris et que les évolutions puissent être réalisées en autonomie.',
+							'Your team keeps the tools, the configurations and the documentation. I plan a handover so that how they work is understood and changes can be made independently.',
 					},
 					{
-						question: 'Avec qui communiques-tu pendant la mission ?',
+						question: 'Who do you communicate with during the engagement?',
 						answer:
-							'Avec les interlocuteurs techniques et métier utiles au projet. Nous prévoyons un point de suivi régulier, normalement hebdomadaire, et des échanges complémentaires lorsque des décisions ou des validations sont nécessaires.',
+							'With the technical and business contacts the project needs. We plan a regular follow-up meeting, normally weekly, and extra exchanges when decisions or approvals are needed.',
 					},
 					{
-						question: 'Peut-on continuer à développer pendant les changements ?',
+						question: 'Can we keep developing during the changes?',
 						answer:
-							"Oui, l'objectif est de préserver le rythme de développement. Les modifications sont préparées et testées en parallèle lorsque c'est possible. Une fenêtre de stabilisation ou de migration peut être convenue pour les changements sensibles.",
+							'Yes, the goal is to keep the pace of development. Changes are prepared and tested in parallel whenever possible. A stabilisation or migration window can be agreed for sensitive changes.',
 					},
 					{
-						question: 'Quels outils allons-nous utiliser ?',
+						question: 'Which tools will we use?',
 						answer:
-							"Il n'y a pas de stack imposée. Selon le projet : pipelines CI/CD, analyse de code, outils de refactoring et de performance, Docker, services de conteneurs managés, Kubernetes, Terraform, Grafana, Prometheus ou équivalents. Je privilégie les outils pertinents pour l'équipe et l'existant.",
+							'There is no imposed stack. Depending on the project: CI/CD pipelines, code analysis, refactoring and performance tools, Docker, managed container services, Kubernetes, Terraform, Grafana, Prometheus or equivalents. I favour the tools that make sense for the team and for what already exists.',
 					},
 				],
 			},
 		},
 		page: {
 			description:
-				"Questions et réponses pour les CEO, les CTO et les développeurs : le code, l'infrastructure, les coûts et notre façon de travailler.",
-			title: 'Des réponses concrètes, selon ton rôle.',
+				'Questions and answers for CEOs, CTOs and developers: the code, the infrastructure, the costs and how we work.',
+			title: 'Concrete answers, for your role.',
 			intro:
-				"Tu es CEO, CTO, développeur ou tu portes le projet seul ? Retrouve les réponses aux questions les plus fréquentes sur le code, l'infrastructure, les coûts et notre façon de travailler. Et si ta question n'est pas ici, parlons-en.",
+				"Are you a CEO, a CTO, a developer, or carrying the project on your own? Find the answers to the most frequent questions about the code, the infrastructure, the costs and how we work. And if your question is not here, let's talk.",
 			filter: 'Filter by role',
 			everyone: 'All',
 			search: 'Search the questions',
 			searchPlaceholder: 'Search: tests, costs, access…',
 			noResults: 'No questions with those words.',
 			index: 'Roles',
-			notFound: 'Tu ne trouves pas ta réponse ?',
-			notFoundText: 'Réserve un échange gratuit et parlons de ton contexte.',
+			notFound: "Can't find your answer?",
+			notFoundText: "Book a free conversation and let's talk about your context.",
 		},
 	},
 };
