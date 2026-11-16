@@ -10,8 +10,8 @@ const PATH = 'availability/';
 /** A text with plain spaces, to compare with what the spec writes. */
 const plain = (text: string) => text.replace(/\u00a0/g, ' ');
 
-// The French texts are Julien's (§2); the description is made of his sentences. Portuguese is their
-// translation. English shows the French until its translation.
+// The French texts are Julien's (§2); the description is made of his sentences. English and
+// Portuguese are their translations.
 const FRENCH = {
 	title: 'Disponibilité & conditions',
 	description:
@@ -118,7 +118,108 @@ const FRENCH = {
 type Texts = typeof FRENCH;
 const EXPECTED: Record<Language, Texts> = {
 	fr: FRENCH,
-	en: FRENCH,
+	en: {
+		title: 'Availability & conditions',
+		description:
+			'Compare the availability levels, calculate your theoretical downtime and read the conditions of the conformity guarantee.',
+		heading: 'What level of availability for your SaaS?',
+		intro:
+			'An availability objective is chosen according to the real impact of an outage on your business. The higher the objective, the more demanding and costly the architecture, the redundancy and the operations can become. Compare the levels before deciding.',
+		calculator: {
+			title: 'Calculate your theoretical downtime',
+			text: 'Choose an availability objective and see what it represents in minutes per month and in hours per year. These values are indicative: an architecture objective does not, on its own, guarantee the availability of the whole application.',
+			objective: 'Availability objective',
+			month: 'Length of the month',
+			days: 'days',
+			result: 'Maximum theoretical downtime',
+			perMonth: 'Per month',
+			perYear: 'Yearly equivalent',
+			about: 'about',
+			formula:
+				'Formula, for round-the-clock measurement: (1 − objective / 100) × length of the period in seconds, over the chosen month or a 365-day year.',
+		},
+		levels: [
+			[
+				'Essential availability',
+				'For an application that can tolerate occasional outages. Simple infrastructure can be enough, depending on the dependencies and the risks accepted.',
+			],
+			[
+				'Enhanced availability',
+				'To reduce outages and better protect critical services. Monitoring and limiting single points of failure become priorities.',
+			],
+			[
+				'High availability',
+				'For services where a prolonged outage has a significant impact. Suitable redundancy, failover mechanisms and recovery tests may be needed.',
+			],
+			[
+				'Very high availability',
+				'For uses that are particularly sensitive to outages. The architecture and the operating procedures must be studied case by case.',
+			],
+		],
+		architecture: {
+			title: 'What the objective asks of the architecture',
+			intro:
+				'The higher the objective, the more the architecture must limit single points of failure and recover quickly from a failure. The choices below can contribute to this, depending on the level chosen, but no topology on its own guarantees an availability percentage.',
+			cards: [
+				[
+					'Redundancy',
+					'Several instances of the application, so that one failed instance does not stop the whole service. At the less demanding levels, simple infrastructure can be enough.',
+				],
+				[
+					'Backups',
+					'Regular backups, with tested restores, whatever the level. They let you start again after an incident, without preventing the outage.',
+				],
+				[
+					'Database',
+					'Often the trickiest single point of failure. As the objective rises, a replica ready to take over can become necessary.',
+				],
+				[
+					'Multi-AZ',
+					'Spreading the resources over several availability zones of the same region, so that the failure of one zone does not stop the whole service.',
+				],
+				[
+					'Failover',
+					'Mechanisms that redirect the traffic to a healthy resource, and recovery tests to check that they work.',
+				],
+				[
+					'Monitoring',
+					'Alerts to detect an outage and react quickly. It becomes a priority from 99.9%.',
+				],
+			],
+		},
+		commitment: [
+			'An availability objective is not an on-call service.',
+			'I design, configure and check the infrastructure to meet the availability level chosen in the intervention proposal. The cloud provider remains responsible for its own service commitments. After delivery, day-to-day monitoring and incident response are part of the organisation set up with your team or your operations provider. Round-the-clock human intervention is not included.',
+		],
+		guarantee: [
+			'A three-month technical conformity guarantee.',
+			'When the four blocks are carried out as part of a complete engagement, defects in the design or configuration of the infrastructure that are directly attributable to me can be reported during the three months following delivery. Their analysis and correction are handled within the scope and on the terms defined in the contract. This guarantee does not automatically cover application bugs, external outages or unapproved changes.',
+		],
+		conditions: {
+			title: 'Conditions and limits of the conformity guarantee',
+			intro:
+				'The contractual terms of the intervention proposal prevail. The principles below explain how the guarantee works and do not replace the signed contract.',
+			items: [
+				[
+					'What is covered',
+					'Defects in the design, configuration or deployment of the infrastructure directly related to the work delivered and included in the contractual scope, reported within three months of the delivery of the complete engagement covering the four blocks.',
+				],
+				[
+					'What is not covered',
+					"Outages specific to cloud providers or third-party services, unless they reveal a design or configuration fault within my engagement; application bugs and changes outside the corrected scope; changes to code, configuration or infrastructure made without approval that cause the malfunction; use outside the agreed sizing assumptions; failure to follow the documented critical prerequisites or recommendations; incidents caused by access, permissions or information unavailable on the client's side.",
+				],
+				[
+					'Responsibilities',
+					'The client remains responsible for day-to-day operations, for approving changes and for organising the response to incidents, unless an additional service is explicitly provided for. The guarantee does not include round-the-clock on-call support, an immediate response time or automatic financial compensation.',
+				],
+				[
+					'How to report a defect',
+					'During the covered period, the client sends a description of the problem and the information useful for the diagnosis. When the non-conformity falls within the scope of the engagement, the terms of the correction are agreed according to its nature and impact.',
+				],
+			],
+		},
+		button: "Let's define the right availability objective for your project",
+	},
 	pt: {
 		title: 'Disponibilidade e condições',
 		description:
