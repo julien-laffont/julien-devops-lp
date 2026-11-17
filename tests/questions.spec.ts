@@ -116,7 +116,7 @@ const APPROVED: Record<AudienceId, [question: string, answer: string][]> = {
 };
 
 // The page's title, introduction, description and closing lines are Julien's French, translated into
-// Portuguese; English shows the French until it is translated.
+// English and Portuguese.
 const EXPECTED: Record<
 	Language,
 	{
@@ -188,11 +188,11 @@ const EXPECTED: Record<
 	},
 	en: {
 		menu: 'Your challenges',
-		title: 'Des réponses concrètes, selon ton rôle.',
+		title: 'Concrete answers, for your role.',
 		intro:
-			"Tu es CEO, CTO, développeur ou tu portes le projet seul ? Retrouve les réponses aux questions les plus fréquentes sur le code, l'infrastructure, les coûts et notre façon de travailler. Et si ta question n'est pas ici, parlons-en.",
+			"Are you a CEO, a CTO, a developer, or carrying the project on your own? Find the answers to the most frequent questions about the code, the infrastructure, the costs and how we work. And if your question is not here, let's talk.",
 		description:
-			"Questions et réponses pour les CEO, les CTO et les développeurs : le code, l'infrastructure, les coûts et notre façon de travailler.",
+			'Questions and answers for CEOs, CTOs and developers: the code, the infrastructure, the costs and how we work.',
 		audiences: {
 			general: 'General questions',
 			cto: 'For CTOs',
@@ -203,8 +203,8 @@ const EXPECTED: Record<
 		questions: 'questions',
 		index: 'Roles',
 		all: 'See all questions',
-		notFound: 'Tu ne trouves pas ta réponse ?',
-		notFoundText: 'Réserve un échange gratuit et parlons de ton contexte.',
+		notFound: "Can't find your answer?",
+		notFoundText: "Book a free conversation and let's talk about your context.",
 	},
 };
 

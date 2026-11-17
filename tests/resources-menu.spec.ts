@@ -4,8 +4,8 @@ import { expect, test, type Page } from '@playwright/test';
 import { inEachBuild, pagesOf } from './builds';
 import { LANGUAGES, LINKEDIN, MALT, NAME, type Language } from './expected';
 
-/** The submenu's name. English shows the French one until the English translation. */
-const MENU: Record<Language, string> = { fr: 'Ressources', en: 'Ressources', pt: 'Recursos' };
+/** The submenu's name. */
+const MENU: Record<Language, string> = { fr: 'Ressources', en: 'Resources', pt: 'Recursos' };
 
 /** The name of the «Tes défis» submenu. */
 const CHALLENGES: Record<Language, string> = {
@@ -18,13 +18,13 @@ const CHALLENGES: Record<Language, string> = {
 const ENTRIES: { slug: string; name: Record<Language, string> }[] = [
 	{
 		slug: 'cloud/',
-		name: { fr: 'Choisir son cloud', en: 'Choisir son cloud', pt: 'Escolher a cloud' },
+		name: { fr: 'Choisir son cloud', en: 'Choosing a cloud', pt: 'Escolher a cloud' },
 	},
 	{
 		slug: 'sovereignty/',
 		name: {
 			fr: 'Souveraineté des données',
-			en: 'Souveraineté des données',
+			en: 'Data sovereignty',
 			pt: 'Soberania dos dados',
 		},
 	},
@@ -32,7 +32,7 @@ const ENTRIES: { slug: string; name: Record<Language, string> }[] = [
 		slug: 'availability/',
 		name: {
 			fr: 'Disponibilité & conditions',
-			en: 'Disponibilité & conditions',
+			en: 'Availability & conditions',
 			pt: 'Disponibilidade e condições',
 		},
 	},

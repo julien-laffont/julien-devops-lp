@@ -2,18 +2,23 @@ import { expect, test } from '@playwright/test';
 import { inEachBuild } from './builds';
 import { LANGUAGES, BOOKING_PAGE, type Language } from './expected';
 
-// The Hero's texts, from Julien's document; English keeps the French ones until it is translated.
+// The Hero's texts, from Julien's document.
 // The page description is the Promise and the first sentence below it.
-const FRENCH_HERO = {
-	support:
-		"J'automatise la qualité du code, je réduis la dette technique et je construis une infrastructure capable de suivre ta croissance. Tes développeurs passent moins de temps à corriger les problèmes, et plus de temps à faire évoluer ton produit.",
-	note: '45 min sur Google Meet. Gratuit et sans engagement.',
-	description:
-		"Moins de bugs. Un code plus propre. Un SaaS prêt à grandir. J'automatise la qualité du code, je réduis la dette technique et je construis une infrastructure capable de suivre ta croissance.",
-};
 const HERO = {
-	fr: FRENCH_HERO,
-	en: FRENCH_HERO,
+	fr: {
+		support:
+			"J'automatise la qualité du code, je réduis la dette technique et je construis une infrastructure capable de suivre ta croissance. Tes développeurs passent moins de temps à corriger les problèmes, et plus de temps à faire évoluer ton produit.",
+		note: '45 min sur Google Meet. Gratuit et sans engagement.',
+		description:
+			"Moins de bugs. Un code plus propre. Un SaaS prêt à grandir. J'automatise la qualité du code, je réduis la dette technique et je construis une infrastructure capable de suivre ta croissance.",
+	},
+	en: {
+		support:
+			'I automate code quality, reduce technical debt and build infrastructure that can keep up with your growth. Your developers spend less time fixing problems, and more time moving your product forward.',
+		note: '45 min on Google Meet. Free, with no commitment.',
+		description:
+			'Fewer bugs. Cleaner code. A SaaS ready to grow. I automate code quality, reduce technical debt and build infrastructure that can keep up with your growth.',
+	},
 	pt: {
 		support:
 			'Automatizo a qualidade do código, reduzo a dívida técnica e construo uma infraestrutura capaz de acompanhar o teu crescimento. Os teus programadores passam menos tempo a corrigir problemas, e mais tempo a fazer evoluir o teu produto.',

@@ -56,7 +56,7 @@ const RETIRED: Record<Language, string[]> = {
 	],
 };
 
-// English pages show French placeholders, so every page is checked in every language.
+// Every page is checked against the phrases of every language.
 const PHRASES = Object.values(RETIRED).flat();
 
 /** Case, curly apostrophes and non-breaking spaces never hide a phrase. */

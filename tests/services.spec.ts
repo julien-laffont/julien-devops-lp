@@ -13,8 +13,8 @@ interface Block {
 	tools: string[];
 }
 
-// The Blocks and their tags: in French, Julien's final text; in Portuguese, its translation. English
-// still holds the French text, until it is translated.
+// The Blocks and their tags: in French, Julien's final text; in English and Portuguese, its
+// translations.
 const FRENCH = {
 	label: 'Services',
 	title: 'Quatre leviers pour fiabiliser et faire grandir ton SaaS.',
@@ -172,7 +172,79 @@ const EXPECTED: Record<
 		],
 	},
 	fr: { ...FRENCH, blockLabel: 'Bloc', toolsLabel: 'Domaines et outils' },
-	en: { ...FRENCH, blockLabel: 'Block', toolsLabel: 'Domaines et outils' },
+	en: {
+		label: 'Services',
+		title: 'Four levers to make your SaaS reliable and help it grow.',
+		intro:
+			'From code quality to monitoring in production, I work on the points that slow your team down. After a diagnosis, we define the scope, the priorities and the order of the work together. You can hand me a specific need or a complete project.',
+		blockLabel: 'Block',
+		toolsLabel: 'Areas and tools',
+		blocks: [
+			{
+				name: 'Code audit & CI/CD',
+				summary: 'Catch problems before they reach production.',
+				text: 'I analyse the repository and the delivery processes, then set up a pipeline suited to your project: code quality, linting, automated tests, security scanning and dependency checks. Errors are flagged in the pull request, before they become incidents for your customers.',
+				tools: [
+					'GitHub Actions',
+					'GitLab CI',
+					'Lint',
+					'Unit tests',
+					'Integration tests',
+					'E2E tests',
+					'SonarQube',
+					'Trivy',
+					'Gitleaks',
+					'And more, depending on the stack',
+				],
+			},
+			{
+				name: 'Code cleanup & optimisation',
+				summary: 'Less technical debt, more time for development.',
+				text: 'I take on the application fixes, the refactoring and the performance optimisations identified as priorities myself. I also automate part of the repetitive maintenance. The goal: a cleaner, faster application that is simpler to evolve. The amount of work is set after the audit: it is not an unlimited rewrite of the whole codebase.',
+				tools: [
+					'Refactoring',
+					'Technical debt',
+					'Performance',
+					'APIs & queries',
+					'Dependencies',
+					'Automated maintenance',
+					'Depending on the stack',
+				],
+			},
+			{
+				name: 'Scalable infrastructure',
+				summary: 'The right architecture for your use, with no needless complexity.',
+				text: 'I containerise the application when it is needed and choose the hosting suited to its load: managed containers, serverless services or Kubernetes. Infrastructure as Code describes, versions and reproduces the environments. The goal is to be able to grow without oversizing the infrastructure from the start.',
+				tools: [
+					'Docker',
+					'Containers as a Service',
+					'Kubernetes',
+					'Terraform',
+					'GCP',
+					'AWS',
+					'Azure',
+					'Scaleway',
+					'OVHcloud',
+					'Infomaniak',
+					'And other providers',
+				],
+			},
+			{
+				name: 'Observability',
+				summary: 'Stop finding out about incidents from your customers.',
+				text: 'I set up the metrics, logs, dashboards and alerts needed to follow the health of the application and its infrastructure. Instead of checking by hand that everything works, your team is warned as soon as a detectable problem appears, and has the information it needs to act.',
+				tools: [
+					'Grafana',
+					'Prometheus',
+					'Logs',
+					'Alerts',
+					'Monitoring',
+					'Tracing',
+					'Cloud-native tools',
+				],
+			},
+		],
+	},
 };
 
 /** Where the Visitor opens the page. */
@@ -369,7 +441,7 @@ const diagram = (page: Page, language: Language, k: number) =>
 /** What block 2's mini-diagram shows, for screen readers. */
 const CLEANUP_DIAGRAM: Record<Language, string> = {
 	fr: 'Un bug et du code en double disparaissent : le code raccourcit et le temps de réponse baisse.',
-	en: 'Un bug et du code en double disparaissent : le code raccourcit et le temps de réponse baisse.',
+	en: 'A bug and duplicated code disappear: the code gets shorter and the response time drops.',
 	pt: 'Um bug e código duplicado desaparecem: o código fica mais curto e o tempo de resposta desce.',
 };
 

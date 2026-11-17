@@ -157,17 +157,55 @@ const FR: Texts = {
 	},
 };
 
-// French is the reference; Portuguese is its translation, and English shows French until it is translated.
+// French is the reference; English and Portuguese are its translations.
 const EXPECTED: Record<Language, Texts> = {
 	fr: FR,
 	// The browser names the countries and writes the dates in English.
 	en: {
-		...FR,
+		title: `Data sovereignty · ${NAME}`,
+		description:
+			'Hosting an application in Europe is not enough to understand where the data flows. Sovereignty is built through technical, contractual and organisational choices.',
+		heading: 'Is your data really under your control?',
+		intro:
+			'Hosting an application in Europe is not, on its own, enough to understand where the data flows or which providers can access it. Sovereignty is built through technical, contractual and organisational choices.',
+		sections: [
+			[
+				'European hosting: a first step, not a complete answer.',
+				'Where the servers are matters, but you also need to look at the company that provides the service, its subcontractors, the backups, the monitoring, the administrative access and the external services the application uses.',
+			],
+			[
+				'Data does not necessarily stay where your server runs.',
+				'An analytics tool, a logging system, a CDN, an authentication service, an email solution or an artificial intelligence API can process some data outside your main hosting. Mapping these flows helps detect the transfers and dependencies that are easily forgotten.',
+			],
+			[
+				'French, European or international provider: what are the differences?',
+				'The right choice depends on your obligations, the features you need and the contractual guarantees offered. A European provider does not automatically offer every guarantee expected, and a European region of an international provider does not, on its own, settle every legal question.',
+			],
+			[
+				'Regulation, contracts and technical protections.',
+				'GDPR, international transfers, jurisdiction rules, encryption and access control must be examined together. The US CLOUD Act can matter in the analysis of some providers, but its existence does not mean that all the data hosted with these companies is freely accessible. Sector requirements, such as SecNumCloud where they apply, must be checked against the official frameworks.',
+			],
+			[
+				'An architecture suited to your sovereignty constraints.',
+				'I help you identify the technical dependencies, compare the hosting options and build the location, security and reversibility constraints into the architecture. For legal and regulatory conclusions, the analysis must be validated by the relevant specialists.',
+			],
+		],
+		cta: "Let's talk about the sovereignty of your infrastructure",
 		table: {
-			...FR.table,
+			caption:
+				'What the official sources say about the standard public cloud of a few providers, in alphabetical order. This is not a ranking: check each point for your offering and your contract.',
+			columns: [
+				'Provider',
+				'Headquarters country',
+				'Hosting zones',
+				'Jurisdictions',
+				'Backups and logs',
+				'Certifications of the offering',
+				'Official references',
+			],
 			headquarters: [
 				['AWS', 'United States'],
-				['Exoscale', 'Switzerland Groupe : Austria'],
+				['Exoscale', 'Switzerland Group: Austria'],
 				['Google Cloud', 'United States'],
 				['Hetzner', 'Germany'],
 				['Infomaniak', 'Switzerland'],
@@ -177,33 +215,34 @@ const EXPECTED: Record<Language, Texts> = {
 				['Scaleway', 'France'],
 			],
 			parents: [
-				'Société mère : United States',
-				'Société mère : Austria',
-				'Société mère : United States',
-				'Société mère : non communiqué',
-				'Société mère : Switzerland',
-				'Société mère : United States',
-				'Société mère : France',
-				'Société mère : France',
-				'Société mère : France',
+				'Parent company: United States',
+				'Parent company: Austria',
+				'Parent company: United States',
+				'Parent company: not disclosed',
+				'Parent company: Switzerland',
+				'Parent company: United States',
+				'Parent company: France',
+				'Parent company: France',
+				'Parent company: France',
 			],
 			aws: [
 				'United States',
-				"UE : France, Germany, Ireland, Italy, Spain, Sweden Hors UE : Switzerland, United Kingdom Aussi hors d'Europe",
-				'Amazon Web Services EMEA SARL Contrat : droit luxembourgeois Société mère : United States',
-				FR.table.aws[3],
-				FR.table.aws[4],
+				'EU: France, Germany, Ireland, Italy, Spain, Sweden Outside the EU: Switzerland, United Kingdom Also outside Europe',
+				'Amazon Web Services EMEA SARL Contract: Luxembourg law Parent company: United States',
+				'Backups: in the chosen region (elsewhere only if you configure it) Logs: part of it can be outside the chosen location',
+				'HDS ISO/IEC 27001',
 			],
-			read: 'Consultées le Nov 13, 2026, Nov 16, 2026',
+			notDisclosed: 'not disclosed',
+			read: 'Read on Nov 13, 2026, Nov 16, 2026',
 		},
 		notes: {
 			switzerland: [
-				FR.notes.switzerland[0],
-				FR.notes.switzerland[1].replace('13 nov. 2026', 'Nov 13, 2026'),
+				'Switzerland is not part of the European Union. The European Commission does, however, recognise that it ensures an adequate level of protection for personal data: personal data can be transferred there from the EU without additional safeguards. This does not replace the rest of the analysis: contract, subcontractors, access.',
+				'Sources: European Union, the 27 member countries · Swiss Confederation (FDFA), bilateral agreements · European Commission, adequacy decisions · Decision 2000/518/EC. Read on Nov 13, 2026.',
 			],
 			cloudAct: [
-				FR.notes.cloudAct[0],
-				FR.notes.cloudAct[1].replace('13 nov. 2026', 'Nov 13, 2026'),
+				'The CLOUD Act and the Patriot Act are not the same thing. The Patriot Act is a US anti-terrorism law from 2001. The CLOUD Act, passed in 2018, provides that a provider subject to US law must disclose, on a lawful request from the US authorities, the data in its possession or under its control, whether it is stored in the United States or elsewhere. A non-US company can also be subject to it if it has sufficient ties to the United States: this is assessed case by case.',
+				'Sources: 18 U.S.C. § 2713 (CLOUD Act) · US Department of Justice, white paper on the CLOUD Act · Public Law 107-56 (USA PATRIOT Act). Read on Nov 13, 2026.',
 			],
 		},
 	},

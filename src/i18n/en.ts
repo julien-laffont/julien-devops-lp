@@ -1,39 +1,39 @@
 // Typed from French, the Reference language. A text still in French waits for its translation.
 import type { Dictionary } from './fr';
 
-const promise = 'Moins de bugs. Un code plus propre. Un SaaS prêt à grandir.';
+const promise = 'Fewer bugs. Cleaner code. A SaaS ready to grow.';
 
 export const en: Dictionary = {
-	designation: 'Consultant DevOps',
+	designation: 'DevOps consultant',
 	promise,
 	bookButton: 'Book a conversation',
 	header: {
 		logoTarget: 'home page',
 		languages: 'Language',
 		menu: 'Menu',
-		resources: 'Ressources',
+		resources: 'Resources',
 	},
 	animation: {
 		pause: 'Pause animation',
 		resume: 'Resume animation',
 	},
 	cloud: {
-		link: 'Choisir son cloud',
+		link: 'Choosing a cloud',
 		page: {
-			title: 'Quel cloud choisir pour ton entreprise ?',
+			title: 'Which cloud should your company choose?',
 			description:
-				'Le meilleur cloud dépend de ton produit, de ton équipe, de ta croissance, de ton budget et de tes contraintes réglementaires. Compare les fournisseurs selon tes priorités.',
+				'The best cloud depends on your product, your team, your growth, your budget and your regulatory constraints. Compare the providers according to your priorities.',
 			intro:
-				'Le meilleur cloud dépend de ton produit, de ton équipe, de ta croissance, de ton budget et de tes contraintes réglementaires. Compare les options selon ton contexte, plutôt que de choisir un fournisseur uniquement sur sa notoriété.',
+				'The best cloud depends on your product, your team, your growth, your budget and your regulatory constraints. Compare the options in your own context, rather than choosing a provider on its reputation alone.',
 			cta: {
-				title: 'Tu hésites entre plusieurs architectures ?',
-				text: 'Parlons de ton projet et comparons les options adaptées à tes contraintes.',
+				title: "Can't decide between several architectures?",
+				text: "Let's talk about your project and compare the options that fit your constraints.",
 			},
 		},
 		chart: {
-			title: 'Compare les fournisseurs selon tes priorités',
+			title: 'Compare the providers according to your priorities',
 			instruction:
-				'Choisis un scénario pour voir les points forts, les limites et les sources officielles de chaque fournisseur.',
+				'Choose a scenario to see the strengths, the limits and the official sources of each provider.',
 			scenariosLabel: 'Company scenario',
 			scenarios: {
 				beforeLaunch: {
@@ -54,7 +54,7 @@ export const en: Dictionary = {
 					description: 'Strong peaks and quiet periods.',
 				},
 				costControl: {
-					name: 'Maîtrise des coûts',
+					name: 'Cost control',
 					description: 'See and control infrastructure costs as the SaaS grows.',
 				},
 			},
@@ -78,15 +78,15 @@ export const en: Dictionary = {
 			sources: 'Sources',
 			outboundTraffic: 'Outbound traffic',
 			legend:
-				'Les résultats sont des repères pour préparer une décision, pas un classement universel. Les critères et leur importance peuvent varier selon le projet. Les données sont datées et les évaluations de pertinence sont indicatives.',
+				'The results are reference points to prepare a decision, not a universal ranking. The criteria and their importance can vary from project to project. The data is dated and the suitability ratings are indicative.',
 			footnote:
 				'The facts come from the official pages of the providers and of the ANSSI. The weights of each scenario and the "Cost visibility and control" criterion are Julien\'s opinion.',
-			verified: 'Faits vérifiés le',
+			verified: 'Facts checked on',
 			notes: {
 				aws: {
 					paas: 'App Runner closed to new customers on 30 April 2026.',
 					europeanHeadquarters:
-						"Siège à Seattle, États-Unis. En Europe, l'AWS European Sovereign Cloud est disponible depuis janvier 2026, avec une région en Allemagne.",
+						'Headquarters in Seattle, USA. In Europe, the AWS European Sovereign Cloud has been available since January 2026, with a region in Germany.',
 					secNumCloud: "Not in the ANSSI's SecNumCloud catalogue.",
 					euRegions: '6 regions in the EU.',
 					costs:
@@ -149,9 +149,9 @@ export const en: Dictionary = {
 	ecology: {
 		link: 'Ecology',
 		home: {
-			title: "Un cloud plus efficace, c'est aussi un numérique plus responsable.",
-			text: "Le choix du datacenter, l'architecture et la qualité du code influencent la consommation de ressources. Compare les solutions, découvre les données disponibles et comprends comment réduire les dépenses inutiles et l'empreinte de ton application.",
-			link: "Explorer l'impact environnemental",
+			title: 'A more efficient cloud also means a more responsible digital footprint.',
+			text: "The choice of data centre, the architecture and the quality of the code all affect resource consumption. Compare the options, explore the available data and understand how to reduce unnecessary spending and your application's footprint.",
+			link: 'Explore the environmental impact',
 		},
 		page: {
 			title: 'Ecology and infrastructure',
@@ -257,284 +257,284 @@ export const en: Dictionary = {
 		back: 'Back to the home page',
 	},
 	sovereignty: {
-		link: 'Souveraineté des données',
+		link: 'Data sovereignty',
 		description:
-			'Héberger une application en Europe ne suffit pas à comprendre où circulent les données. La souveraineté se construit par des choix techniques, contractuels et organisationnels.',
-		title: 'Tes données sont-elles vraiment sous ton contrôle ?',
+			'Hosting an application in Europe is not enough to understand where the data flows. Sovereignty is built through technical, contractual and organisational choices.',
+		title: 'Is your data really under your control?',
 		intro:
-			'Héberger une application en Europe ne suffit pas, à lui seul, à comprendre où circulent les données ni quels prestataires peuvent y accéder. La souveraineté se construit par des choix techniques, contractuels et organisationnels.',
+			'Hosting an application in Europe is not, on its own, enough to understand where the data flows or which providers can access it. Sovereignty is built through technical, contractual and organisational choices.',
 		sections: [
 			{
-				title: 'Hébergement européen : une première étape, pas une réponse complète.',
-				text: "La localisation des serveurs compte, mais il faut aussi regarder la société qui fournit le service, les sous-traitants, les sauvegardes, la supervision, les accès d'administration et les services externes utilisés par l'application.",
+				title: 'European hosting: a first step, not a complete answer.',
+				text: 'Where the servers are matters, but you also need to look at the company that provides the service, its subcontractors, the backups, the monitoring, the administrative access and the external services the application uses.',
 			},
 			{
-				title: 'Les données ne restent pas forcément là où tourne ton serveur.',
-				text: "Un outil d'analyse, un système de logs, un CDN, un service d'authentification, une solution d'e-mail ou une API d'intelligence artificielle peut traiter certaines données hors de ton hébergement principal. Cartographier ces flux permet de détecter les transferts et les dépendances que l'on oublie facilement.",
+				title: 'Data does not necessarily stay where your server runs.',
+				text: 'An analytics tool, a logging system, a CDN, an authentication service, an email solution or an artificial intelligence API can process some data outside your main hosting. Mapping these flows helps detect the transfers and dependencies that are easily forgotten.',
 			},
 			{
-				title: 'Fournisseur français, européen ou international : quelles différences ?',
-				text: "Le bon choix dépend de tes obligations, des fonctionnalités nécessaires et des garanties contractuelles offertes. Un fournisseur européen n'offre pas automatiquement toutes les garanties attendues, et une région européenne d'un fournisseur international ne règle pas à elle seule toutes les questions juridiques.",
+				title: 'French, European or international provider: what are the differences?',
+				text: 'The right choice depends on your obligations, the features you need and the contractual guarantees offered. A European provider does not automatically offer every guarantee expected, and a European region of an international provider does not, on its own, settle every legal question.',
 			},
 			{
-				title: 'Réglementation, contrats et protections techniques.',
-				text: "RGPD, transferts internationaux, règles de juridiction, chiffrement et contrôle des accès doivent être examinés ensemble. Le CLOUD Act américain peut compter dans l'analyse de certains fournisseurs, mais son existence ne signifie pas que toutes les données hébergées auprès de ces entreprises sont librement accessibles. Les exigences sectorielles, comme SecNumCloud lorsqu'elles s'appliquent, doivent être vérifiées dans les référentiels officiels.",
+				title: 'Regulation, contracts and technical protections.',
+				text: 'GDPR, international transfers, jurisdiction rules, encryption and access control must be examined together. The US CLOUD Act can matter in the analysis of some providers, but its existence does not mean that all the data hosted with these companies is freely accessible. Sector requirements, such as SecNumCloud where they apply, must be checked against the official frameworks.',
 			},
 			{
-				title: 'Une architecture adaptée à tes contraintes de souveraineté.',
-				text: "Je t'aide à identifier les dépendances techniques, à comparer les options d'hébergement et à intégrer les contraintes de localisation, de sécurité et de réversibilité dans l'architecture. Pour les conclusions juridiques et réglementaires, l'analyse doit être validée par les spécialistes compétents.",
+				title: 'An architecture suited to your sovereignty constraints.',
+				text: 'I help you identify the technical dependencies, compare the hosting options and build the location, security and reversibility constraints into the architecture. For legal and regulatory conclusions, the analysis must be validated by the relevant specialists.',
 			},
 		],
-		cta: 'Parlons de la souveraineté de ton infrastructure',
+		cta: "Let's talk about the sovereignty of your infrastructure",
 		switzerland: {
-			text: "La Suisse ne fait pas partie de l'Union européenne. La Commission européenne reconnaît toutefois qu'elle assure un niveau de protection adéquat des données personnelles : des données personnelles peuvent y être transférées depuis l'UE sans garantie supplémentaire. Cela ne remplace pas le reste de l'analyse : contrat, sous-traitants, accès.",
+			text: 'Switzerland is not part of the European Union. The European Commission does, however, recognise that it ensures an adequate level of protection for personal data: personal data can be transferred there from the EU without additional safeguards. This does not replace the rest of the analysis: contract, subcontractors, access.',
 			sources: {
-				euMembers: 'Union européenne, les 27 pays membres',
-				notMember: 'Confédération suisse (DFAE), accords bilatéraux',
-				adequacy: "Commission européenne, décisions d'adéquation",
-				decision: 'Décision 2000/518/CE',
+				euMembers: 'European Union, the 27 member countries',
+				notMember: 'Swiss Confederation (FDFA), bilateral agreements',
+				adequacy: 'European Commission, adequacy decisions',
+				decision: 'Decision 2000/518/EC',
 			},
 		},
 		cloudAct: {
-			text: "Le CLOUD Act et le Patriot Act ne sont pas synonymes. Le Patriot Act est une loi antiterroriste américaine de 2001. Le CLOUD Act, adopté en 2018, prévoit qu'un fournisseur soumis au droit américain doit communiquer, sur demande légale des autorités américaines, les données qu'il a en sa possession ou sous son contrôle, qu'elles soient stockées aux États-Unis ou ailleurs. Une entreprise non américaine peut aussi y être soumise si elle a des liens suffisants avec les États-Unis : cela s'apprécie au cas par cas.",
+			text: 'The CLOUD Act and the Patriot Act are not the same thing. The Patriot Act is a US anti-terrorism law from 2001. The CLOUD Act, passed in 2018, provides that a provider subject to US law must disclose, on a lawful request from the US authorities, the data in its possession or under its control, whether it is stored in the United States or elsewhere. A non-US company can also be subject to it if it has sufficient ties to the United States: this is assessed case by case.',
 			sources: {
 				statute: '18 U.S.C. § 2713 (CLOUD Act)',
-				whitePaper: 'Département de la Justice des États-Unis, livre blanc sur le CLOUD Act',
+				whitePaper: 'US Department of Justice, white paper on the CLOUD Act',
 				patriotAct: 'Public Law 107-56 (USA PATRIOT Act)',
 			},
 		},
 		sources: 'Sources',
 		table: {
 			caption:
-				"Ce que disent les sources officielles sur le cloud public standard de quelques fournisseurs, par ordre alphabétique. Ce n'est pas un classement : vérifie chaque point pour ton offre et ton contrat.",
+				'What the official sources say about the standard public cloud of a few providers, in alphabetical order. This is not a ranking: check each point for your offering and your contract.',
 			columns: {
-				provider: 'Fournisseur',
-				headquarters: 'Pays du siège',
-				zones: "Zones d'hébergement",
-				contract: 'Juridictions',
-				backupsAndLogs: 'Sauvegardes et logs',
-				certifications: "Certifications de l'offre",
-				references: 'Références officielles',
+				provider: 'Provider',
+				headquarters: 'Headquarters country',
+				zones: 'Hosting zones',
+				contract: 'Jurisdictions',
+				backupsAndLogs: 'Backups and logs',
+				certifications: 'Certifications of the offering',
+				references: 'Official references',
 			},
-			colon: ' :',
-			notDisclosed: 'non communiqué',
-			group: 'Groupe',
-			eu: 'UE',
-			outsideEu: 'Hors UE',
-			elsewhere: "Aussi hors d'Europe",
+			colon: ':',
+			notDisclosed: 'not disclosed',
+			group: 'Group',
+			eu: 'EU',
+			outsideEu: 'Outside the EU',
+			elsewhere: 'Also outside Europe',
 			laws: {
-				CH: 'droit suisse',
-				DE: 'droit allemand',
-				FR: 'droit français',
-				IE: 'droit irlandais',
-				LU: 'droit luxembourgeois',
-				'US-CA': 'droit de la Californie (États-Unis)',
+				CH: 'Swiss law',
+				DE: 'German law',
+				FR: 'French law',
+				IE: 'Irish law',
+				LU: 'Luxembourg law',
+				'US-CA': 'California law (USA)',
 			},
-			contract: 'Contrat',
-			parent: 'Société mère',
-			backups: 'Sauvegardes',
+			contract: 'Contract',
+			parent: 'Parent company',
+			backups: 'Backups',
 			logs: 'Logs',
 			placements: {
-				chosenRegion: 'dans la région choisie (ailleurs seulement si tu le configures)',
-				chosenCountry: 'dans le pays choisi',
-				inEu: "dans l'UE si l'emplacement choisi y est, parfois sur un autre site",
-				otherRegionByDefault: 'par défaut, aussi dans une autre région (modifiable)',
-				partlyElsewhere: "une partie peut être hors de l'emplacement choisi",
+				chosenRegion: 'in the chosen region (elsewhere only if you configure it)',
+				chosenCountry: 'in the chosen country',
+				inEu: 'in the EU if the chosen location is there, sometimes at another site',
+				otherRegionByDefault: 'by default, also in another region (can be changed)',
+				partlyElsewhere: 'part of it can be outside the chosen location',
 			},
-			read: 'Consultées le',
+			read: 'Read on',
 			references: {
-				headquarters: 'Siège',
+				headquarters: 'Headquarters',
 				zones: 'Zones',
-				contract: 'Contrat',
-				parent: 'Société mère',
-				backups: 'Sauvegardes',
+				contract: 'Contract',
+				parent: 'Parent company',
+				backups: 'Backups',
 				logs: 'Logs',
 				certifications: 'Certifications',
 			},
 		},
 	},
 	availability: {
-		link: 'Disponibilité & conditions',
+		link: 'Availability & conditions',
 		description:
-			"Compare les niveaux de disponibilité, calcule ton temps d'indisponibilité théorique et consulte les conditions de la garantie de conformité.",
-		heading: 'Quel niveau de disponibilité pour ton SaaS ?',
+			'Compare the availability levels, calculate your theoretical downtime and read the conditions of the conformity guarantee.',
+		heading: 'What level of availability for your SaaS?',
 		intro:
-			"Un objectif de disponibilité se choisit selon l'impact réel d'une interruption sur ton activité. Plus l'objectif est élevé, plus l'architecture, la redondance et l'exploitation peuvent devenir exigeantes et coûteuses. Compare les niveaux avant de décider.",
+			'An availability objective is chosen according to the real impact of an outage on your business. The higher the objective, the more demanding and costly the architecture, the redundancy and the operations can become. Compare the levels before deciding.',
 		calculator: {
-			title: "Calcule ton temps d'indisponibilité théorique",
-			text: "Choisis un objectif de disponibilité et découvre ce qu'il représente en minutes par mois et en heures par an. Ces valeurs sont indicatives : un objectif d'architecture ne garantit pas, à lui seul, la disponibilité de toute l'application.",
-			objective: 'Objectif de disponibilité',
-			month: 'Durée du mois',
-			days: 'jours',
-			result: 'Indisponibilité maximale théorique',
-			perMonth: 'Par mois',
-			perYear: 'Équivalent annuel',
-			about: 'environ',
+			title: 'Calculate your theoretical downtime',
+			text: 'Choose an availability objective and see what it represents in minutes per month and in hours per year. These values are indicative: an architecture objective does not, on its own, guarantee the availability of the whole application.',
+			objective: 'Availability objective',
+			month: 'Length of the month',
+			days: 'days',
+			result: 'Maximum theoretical downtime',
+			perMonth: 'Per month',
+			perYear: 'Yearly equivalent',
+			about: 'about',
 			formula:
-				'Formule, pour une mesure 24 h/24 : (1 − objectif / 100) × durée de la période en secondes, sur le mois choisi ou sur une année de 365 jours.',
+				'Formula, for round-the-clock measurement: (1 − objective / 100) × length of the period in seconds, over the chosen month or a 365-day year.',
 		},
 		levels: {
 			essential: {
-				title: 'Disponibilité essentielle',
-				text: 'Pour une application qui peut tolérer des interruptions occasionnelles. Une infrastructure simple peut suffire selon les dépendances et les risques acceptés.',
+				title: 'Essential availability',
+				text: 'For an application that can tolerate occasional outages. Simple infrastructure can be enough, depending on the dependencies and the risks accepted.',
 			},
 			reinforced: {
-				title: 'Disponibilité renforcée',
-				text: 'Pour réduire les interruptions et mieux sécuriser les services critiques. La supervision et la limitation des points uniques de défaillance deviennent prioritaires.',
+				title: 'Enhanced availability',
+				text: 'To reduce outages and better protect critical services. Monitoring and limiting single points of failure become priorities.',
 			},
 			high: {
-				title: 'Haute disponibilité',
-				text: 'Pour des services où une interruption prolongée a un impact important. Une redondance adaptée, des mécanismes de bascule et des tests de reprise peuvent être nécessaires.',
+				title: 'High availability',
+				text: 'For services where a prolonged outage has a significant impact. Suitable redundancy, failover mechanisms and recovery tests may be needed.',
 			},
 			veryHigh: {
-				title: 'Disponibilité très élevée',
-				text: "Pour des usages particulièrement sensibles aux interruptions. L'architecture et les procédures d'exploitation doivent être étudiées au cas par cas.",
+				title: 'Very high availability',
+				text: 'For uses that are particularly sensitive to outages. The architecture and the operating procedures must be studied case by case.',
 			},
 		},
 		architecture: {
-			title: "Ce que l'objectif demande à l'architecture",
+			title: 'What the objective asks of the architecture',
 			intro:
-				"Plus l'objectif est élevé, plus l'architecture doit limiter les points uniques de défaillance et se remettre vite d'une panne. Les choix ci-dessous peuvent y contribuer selon le niveau retenu, mais aucune topologie ne garantit, à elle seule, un pourcentage de disponibilité.",
+				'The higher the objective, the more the architecture must limit single points of failure and recover quickly from a failure. The choices below can contribute to this, depending on the level chosen, but no topology on its own guarantees an availability percentage.',
 			cards: [
 				{
-					title: 'Redondance',
-					text: "Plusieurs instances de l'application, pour qu'une instance en panne n'arrête pas tout le service. Aux niveaux les moins exigeants, une infrastructure simple peut suffire.",
+					title: 'Redundancy',
+					text: 'Several instances of the application, so that one failed instance does not stop the whole service. At the less demanding levels, simple infrastructure can be enough.',
 				},
 				{
-					title: 'Sauvegardes',
-					text: "Des sauvegardes régulières, avec des restaurations testées, quel que soit le niveau. Elles permettent de repartir après un incident, sans empêcher l'interruption.",
+					title: 'Backups',
+					text: 'Regular backups, with tested restores, whatever the level. They let you start again after an incident, without preventing the outage.',
 				},
 				{
-					title: 'Base de données',
-					text: "Souvent le point unique de défaillance le plus délicat. Quand l'objectif augmente, une réplique prête à prendre le relais peut devenir nécessaire.",
+					title: 'Database',
+					text: 'Often the trickiest single point of failure. As the objective rises, a replica ready to take over can become necessary.',
 				},
 				{
 					title: 'Multi-AZ',
-					text: "Répartir les ressources sur plusieurs zones de disponibilité d'une même région, pour que la panne d'une zone n'arrête pas tout le service.",
+					text: 'Spreading the resources over several availability zones of the same region, so that the failure of one zone does not stop the whole service.',
 				},
 				{
-					title: 'Bascule (failover)',
-					text: "Des mécanismes qui redirigent le trafic vers une ressource saine, et des tests de reprise pour vérifier qu'ils fonctionnent.",
+					title: 'Failover',
+					text: 'Mechanisms that redirect the traffic to a healthy resource, and recovery tests to check that they work.',
 				},
 				{
-					title: 'Supervision',
-					text: 'Des alertes pour détecter une interruption et réagir vite. Elle devient prioritaire dès 99,9 %.',
+					title: 'Monitoring',
+					text: 'Alerts to detect an outage and react quickly. It becomes a priority from 99.9%.',
 				},
 			],
 		},
 		commitment: {
-			title: "Un objectif de disponibilité n'est pas une astreinte.",
-			text: "Je conçois, configure et vérifie l'infrastructure pour répondre au niveau de disponibilité retenu dans la proposition d'intervention. Le fournisseur cloud reste responsable de ses propres engagements de service. Après livraison, la surveillance quotidienne et la réaction aux incidents relèvent de l'organisation prévue avec ton équipe ou ton prestataire d'exploitation. Une intervention humaine 24 h/24 n'est pas incluse.",
+			title: 'An availability objective is not an on-call service.',
+			text: 'I design, configure and check the infrastructure to meet the availability level chosen in the intervention proposal. The cloud provider remains responsible for its own service commitments. After delivery, day-to-day monitoring and incident response are part of the organisation set up with your team or your operations provider. Round-the-clock human intervention is not included.',
 		},
 		guarantee: {
-			title: 'Trois mois de garantie de conformité technique.',
-			text: "Lorsque les quatre blocs sont réalisés dans le cadre d'une prestation complète, les défauts de conception ou de configuration de l'infrastructure qui me sont directement imputables peuvent être signalés pendant les trois mois suivant la livraison. Leur analyse et leur correction sont prises en charge selon le périmètre et les modalités définis au contrat. Cette garantie ne couvre pas automatiquement les bugs applicatifs, les pannes externes ou les modifications non validées.",
+			title: 'A three-month technical conformity guarantee.',
+			text: 'When the four blocks are carried out as part of a complete engagement, defects in the design or configuration of the infrastructure that are directly attributable to me can be reported during the three months following delivery. Their analysis and correction are handled within the scope and on the terms defined in the contract. This guarantee does not automatically cover application bugs, external outages or unapproved changes.',
 		},
 		conditions: {
-			title: 'Conditions et limites de la garantie de conformité',
+			title: 'Conditions and limits of the conformity guarantee',
 			intro:
-				"Les conditions contractuelles de la proposition d'intervention font foi. Les principes ci-dessous expliquent le fonctionnement de la garantie et ne remplacent pas le contrat signé.",
+				'The contractual terms of the intervention proposal prevail. The principles below explain how the guarantee works and do not replace the signed contract.',
 			items: [
 				{
-					title: 'Ce qui est couvert',
-					text: "Les défauts de conception, de paramétrage ou de déploiement de l'infrastructure directement liés aux travaux livrés et inclus dans le périmètre contractuel, signalés dans les trois mois suivant la livraison de la prestation complète couvrant les quatre blocs.",
+					title: 'What is covered',
+					text: 'Defects in the design, configuration or deployment of the infrastructure directly related to the work delivered and included in the contractual scope, reported within three months of the delivery of the complete engagement covering the four blocks.',
 				},
 				{
-					title: "Ce qui n'est pas couvert",
-					text: "Les indisponibilités propres aux fournisseurs cloud ou à des services tiers, sauf lorsqu'elles révèlent une faute de conception ou de configuration relevant de ma prestation ; les bugs et évolutions applicatives hors du périmètre corrigé ; les changements de code, de configuration ou d'infrastructure effectués sans validation et à l'origine du dysfonctionnement ; l'utilisation en dehors des hypothèses de dimensionnement convenues ; le non-respect des prérequis ou recommandations critiques documentés ; les incidents dus à des accès, autorisations ou informations indisponibles du côté client.",
+					title: 'What is not covered',
+					text: "Outages specific to cloud providers or third-party services, unless they reveal a design or configuration fault within my engagement; application bugs and changes outside the corrected scope; changes to code, configuration or infrastructure made without approval that cause the malfunction; use outside the agreed sizing assumptions; failure to follow the documented critical prerequisites or recommendations; incidents caused by access, permissions or information unavailable on the client's side.",
 				},
 				{
-					title: 'Responsabilités',
-					text: "Le client conserve la responsabilité de l'exploitation courante, de la validation des changements et de l'organisation de la réponse aux incidents, sauf prestation supplémentaire explicitement prévue. La garantie n'inclut pas d'astreinte 24 h/24, de délai de réaction immédiat ni de compensation financière automatique.",
+					title: 'Responsibilities',
+					text: 'The client remains responsible for day-to-day operations, for approving changes and for organising the response to incidents, unless an additional service is explicitly provided for. The guarantee does not include round-the-clock on-call support, an immediate response time or automatic financial compensation.',
 				},
 				{
-					title: 'Comment signaler un défaut',
-					text: 'Pendant la période couverte, le client transmet une description du problème et les informations utiles au diagnostic. Lorsque la non-conformité entre dans le périmètre de la prestation, les modalités de correction sont convenues en fonction de sa nature et de son impact.',
+					title: 'How to report a defect',
+					text: 'During the covered period, the client sends a description of the problem and the information useful for the diagnosis. When the non-conformity falls within the scope of the engagement, the terms of the correction are agreed according to its nature and impact.',
 				},
 			],
 		},
-		button: "Définissons l'objectif de disponibilité adapté à ton projet",
+		button: "Let's define the right availability objective for your project",
 	},
 	homePage: {
-		description: `${promise} J'automatise la qualité du code, je réduis la dette technique et je construis une infrastructure capable de suivre ta croissance.`,
+		description: `${promise} I automate code quality, reduce technical debt and build infrastructure that can keep up with your growth.`,
 		hero: {
 			support:
-				"J'automatise la qualité du code, je réduis la dette technique et je construis une infrastructure capable de suivre ta croissance. Tes développeurs passent moins de temps à corriger les problèmes, et plus de temps à faire évoluer ton produit.",
-			note: '45 min sur Google Meet. Gratuit et sans engagement.',
+				'I automate code quality, reduce technical debt and build infrastructure that can keep up with your growth. Your developers spend less time fixing problems, and more time moving your product forward.',
+			note: '45 min on Google Meet. Free, with no commitment.',
 		},
 		whoItsFor: {
-			title: 'Pour qui ?',
+			title: 'Who is it for?',
 			intro:
-				"Tu développes un SaaS ou une application web, seul ou avec une équipe ? Je m'adapte à ton stade de développement, à ton organisation et à tes contraintes techniques.",
+				'Are you building a SaaS or a web application, on your own or with a team? I adapt to your stage of development, your organisation and your technical constraints.',
 			situations: [
-				'Tu prépares un lancement et tu veux partir sur des bases solides.',
-				'Ton produit est déjà en ligne et les bugs ou la maintenance ralentissent les nouveautés.',
-				'Tu anticipes une montée en charge et tu veux éviter les mauvaises surprises.',
+				'You are preparing a launch and want to start on solid foundations.',
+				'Your product is already live, and bugs or maintenance are slowing down new features.',
+				'You expect your load to grow and want to avoid unpleasant surprises.',
 			],
-			button: 'Parlons de ton projet',
+			button: "Let's talk about your project",
 		},
 		todayAndAfter: {
-			title: "Aujourd'hui… et après.",
-			todayTitle: "Aujourd'hui",
+			title: 'Today… and after.',
+			todayTitle: 'Today',
 			today: [
-				'Une nouvelle fonctionnalité en casse une autre, et les clients découvrent les régressions.',
-				'Tes développeurs passent trop de temps sur les bugs, les correctifs et le support.',
-				"Le code obsolète s'accumule, les dépendances vieillissent et les performances se dégradent.",
-				'Les tests et les déploiements reposent encore sur des vérifications manuelles.',
-				"Tu manques de visibilité sur l'état réel de ton application et sur sa capacité à monter en charge.",
+				'A new feature breaks another one, and your customers are the ones who find the regressions.',
+				'Your developers spend too much time on bugs, fixes and support.',
+				'Outdated code piles up, dependencies age and performance degrades.',
+				'Tests and deployments still rely on manual checks.',
+				'You lack visibility into the real state of your application and its ability to handle more load.',
 			],
-			afterTitle: 'Après',
+			afterTitle: 'After',
 			after: [
-				'Les régressions sont détectées plus tôt grâce aux contrôles automatisés.',
-				'Les corrections et les optimisations prioritaires rendent ton code plus maintenable.',
-				'Une partie de la maintenance répétitive est automatisée, pour libérer du temps de développement.',
-				"Les déploiements sont plus prévisibles et l'infrastructure s'adapte à la charge prévue.",
-				"Tu disposes d'indicateurs et d'alertes pour détecter les incidents au plus tôt.",
+				'Regressions are caught earlier, thanks to automated checks.',
+				'The priority fixes and optimisations make your code easier to maintain.',
+				'Part of the repetitive maintenance is automated, to free up development time.',
+				'Deployments are more predictable, and the infrastructure adapts to the expected load.',
+				'You have metrics and alerts to detect incidents as early as possible.',
 			],
 		},
 		services: {
 			label: 'Services',
-			title: 'Quatre leviers pour fiabiliser et faire grandir ton SaaS.',
+			title: 'Four levers to make your SaaS reliable and help it grow.',
 			intro:
-				"De la qualité du code à la supervision en production, j'interviens sur les points qui freinent ton équipe. Après un diagnostic, nous définissons ensemble le périmètre, les priorités et l'ordre des interventions. Tu peux me confier un besoin ciblé ou un projet complet.",
+				'From code quality to monitoring in production, I work on the points that slow your team down. After a diagnosis, we define the scope, the priorities and the order of the work together. You can hand me a specific need or a complete project.',
 			blockLabel: 'Block',
-			toolsLabel: 'Domaines et outils',
+			toolsLabel: 'Areas and tools',
 			blocks: [
 				{
-					name: 'Audit du code & CI/CD',
-					summary: "Détecte les problèmes avant qu'ils n'arrivent en production.",
-					text: "J'analyse le dépôt et les processus de livraison, puis je mets en place une pipeline adaptée à ton projet : qualité du code, lint, tests automatisés, analyse de sécurité et contrôles des dépendances. Les erreurs sont signalées dès la pull request, avant de devenir des incidents chez tes clients.",
+					name: 'Code audit & CI/CD',
+					summary: 'Catch problems before they reach production.',
+					text: 'I analyse the repository and the delivery processes, then set up a pipeline suited to your project: code quality, linting, automated tests, security scanning and dependency checks. Errors are flagged in the pull request, before they become incidents for your customers.',
 					tools: [
 						'GitHub Actions',
 						'GitLab CI',
 						'Lint',
-						'Tests unitaires',
-						"Tests d'intégration",
-						'Tests E2E',
+						'Unit tests',
+						'Integration tests',
+						'E2E tests',
 						'SonarQube',
 						'Trivy',
 						'Gitleaks',
 					],
-					toolsAlternative: 'Et plus selon la stack',
+					toolsAlternative: 'And more, depending on the stack',
 				},
 				{
-					name: 'Nettoyage & optimisation du code',
-					summary: 'Moins de dette technique, plus de temps pour développer.',
-					text: "Je prends directement en charge les corrections applicatives, le refactoring du code et les optimisations de performances identifiés comme prioritaires. J'automatise également une partie de la maintenance répétitive. L'objectif : rendre l'application plus propre, plus rapide et plus simple à faire évoluer. Le volume d'intervention est défini après l'audit : il ne s'agit pas d'une refonte illimitée de tout le code.",
+					name: 'Code cleanup & optimisation',
+					summary: 'Less technical debt, more time for development.',
+					text: 'I take on the application fixes, the refactoring and the performance optimisations identified as priorities myself. I also automate part of the repetitive maintenance. The goal: a cleaner, faster application that is simpler to evolve. The amount of work is set after the audit: it is not an unlimited rewrite of the whole codebase.',
 					tools: [
 						'Refactoring',
-						'Dette technique',
-						'Performances',
-						'API & requêtes',
-						'Dépendances',
-						'Maintenance automatisée',
+						'Technical debt',
+						'Performance',
+						'APIs & queries',
+						'Dependencies',
+						'Automated maintenance',
 					],
-					toolsAlternative: 'Selon la stack',
+					toolsAlternative: 'Depending on the stack',
 				},
 				{
-					name: 'Infrastructure scalable',
-					summary: 'La bonne architecture pour ton usage, pas de complexité inutile.',
-					text: "Je conteneurise l'application lorsque c'est nécessaire et je choisis l'hébergement adapté à sa charge : conteneurs managés, services serverless ou Kubernetes. L'Infrastructure as Code permet de décrire, versionner et reproduire les environnements. L'objectif est de pouvoir évoluer sans surdimensionner l'infrastructure dès le départ.",
+					name: 'Scalable infrastructure',
+					summary: 'The right architecture for your use, with no needless complexity.',
+					text: 'I containerise the application when it is needed and choose the hosting suited to its load: managed containers, serverless services or Kubernetes. Infrastructure as Code describes, versions and reproduces the environments. The goal is to be able to grow without oversizing the infrastructure from the start.',
 					tools: [
 						'Docker',
 						'Containers as a Service',
@@ -547,14 +547,14 @@ export const en: Dictionary = {
 						'OVHcloud',
 						'Infomaniak',
 					],
-					toolsAlternative: 'Et autres fournisseurs',
+					toolsAlternative: 'And other providers',
 				},
 				{
-					name: 'Observabilité',
-					summary: 'Ne découvre plus les incidents par tes clients.',
-					text: "Je mets en place les métriques, journaux, tableaux de bord et alertes nécessaires pour suivre la santé de l'application et de son infrastructure. Au lieu de vérifier manuellement si tout fonctionne, ton équipe est avertie dès qu'un problème détectable apparaît et dispose des informations nécessaires pour intervenir.",
-					tools: ['Grafana', 'Prometheus', 'Logs', 'Alertes', 'Monitoring', 'Tracing'],
-					toolsAlternative: 'Outils natifs du cloud',
+					name: 'Observability',
+					summary: 'Stop finding out about incidents from your customers.',
+					text: 'I set up the metrics, logs, dashboards and alerts needed to follow the health of the application and its infrastructure. Instead of checking by hand that everything works, your team is warned as soon as a detectable problem appears, and has the information it needs to act.',
+					tools: ['Grafana', 'Prometheus', 'Logs', 'Alerts', 'Monitoring', 'Tracing'],
+					toolsAlternative: 'Cloud-native tools',
 				},
 			],
 			diagrams: {
@@ -568,10 +568,10 @@ export const en: Dictionary = {
 				},
 				cleanup: {
 					description:
-						'Un bug et du code en double disparaissent : le code raccourcit et le temps de réponse baisse.',
+						'A bug and duplicated code disappear: the code gets shorter and the response time drops.',
 					bug: 'bug',
 					duplicate: '×2',
-					responseTime: 'temps de réponse',
+					responseTime: 'response time',
 				},
 				scaling: {
 					description: 'The instances increase with the load, then decrease again.',
@@ -586,47 +586,46 @@ export const en: Dictionary = {
 			},
 		},
 		steps: {
-			title: 'Cinq étapes pour avancer sereinement.',
+			title: 'Five steps to move forward with peace of mind.',
 			steps: [
 				{
-					name: 'Échange initial',
+					name: 'Initial conversation',
 					sentence:
-						'45 minutes sur Google Meet pour comprendre ton produit, tes priorités et tes contraintes. Gratuit, sans engagement.',
+						'45 minutes on Google Meet to understand your product, your priorities and your constraints. Free, with no commitment.',
 				},
 				{
-					name: 'Diagnostic',
+					name: 'Diagnosis',
 					sentence:
-						'Un premier état des lieux gratuit de ton code et, si nécessaire, de ton infrastructure. Retour sous 3 à 5 jours ouvrés après réception des accès utiles.',
+						'A free first review of your code and, if needed, of your infrastructure. Feedback within 3 to 5 business days of receiving the access needed.',
 				},
 				{
-					name: "Proposition d'intervention",
-					sentence:
-						'Un périmètre précis, des priorités, un calendrier et un prix convenus avant de commencer.',
+					name: 'Intervention proposal',
+					sentence: 'A precise scope, priorities, a schedule and a price, agreed before we start.',
 				},
 				{
-					name: 'Mise en œuvre',
+					name: 'Implementation',
 					sentence:
-						"J'interviens avec ton équipe, en limitant les perturbations du développement. Un point d'avancement régulier, en principe chaque semaine, permet de suivre les actions et les décisions.",
+						'I work alongside your team, keeping disruption to development to a minimum. A regular progress meeting, normally every week, keeps track of the actions and decisions.',
 				},
 				{
-					name: 'Livraison & passation',
+					name: 'Delivery & handover',
 					sentence:
-						'Documentation, vérifications finales et transfert de connaissances pour que ton équipe reste autonome.',
+						'Documentation, final checks and knowledge transfer, so your team stays self-sufficient.',
 				},
 			],
 		},
 		availability: {
-			label: 'Disponibilité & fiabilité',
-			title: 'Une infrastructure fiable, conçue pour durer.',
-			text: "Selon les besoins de ton SaaS, je conçois et teste une infrastructure visant un objectif de disponibilité défini ensemble : 99,5 %, 99,9 %, 99,95 % ou davantage lorsque l'architecture le justifie. Le bon niveau dépend de ton activité, des services utilisés et de ton budget.",
+			label: 'Availability & reliability',
+			title: 'Reliable infrastructure, built to last.',
+			text: "Depending on your SaaS's needs, I design and test infrastructure that aims for an availability objective we set together: 99.5%, 99.9%, 99.95% or more when the architecture justifies it. The right level depends on your business, the services used and your budget.",
 			guarantee:
-				"Pour une intervention complète couvrant les quatre blocs, je propose une garantie de conformité technique de trois mois après la livraison : si un défaut de conception ou de configuration relevant de mon intervention est constaté, je prends en charge sa correction dans les conditions convenues au contrat. Il ne s'agit pas d'une astreinte 24 h/24 ni d'une garantie d'absence de panne applicative.",
-			link: 'Comprendre les niveaux de disponibilité et consulter les conditions',
+				'For a complete intervention covering the four blocks, I offer a three-month technical conformity guarantee after delivery: if a design or configuration defect that comes from my work is found, I take care of fixing it under the conditions agreed in the contract. It is neither round-the-clock on-call support nor a guarantee that the application will never fail.',
+			link: 'Understand the availability levels and read the conditions',
 		},
 		about: {
-			title: 'Qui est Julien ?',
+			title: 'Who is Julien?',
 			wayOfWorking:
-				"J'interviens sur ton projet en français, en anglais ou en portugais. J'utilise des technologies modernes et éprouvées, je limite autant que possible la dépendance à un fournisseur et je documente ce que je livre pour que ton équipe reste autonome. Mes solutions s'adaptent à tes contraintes techniques et métier, pas l'inverse.",
+				'I can work on your project in French, English or Portuguese. I use modern, proven technologies, keep dependence on any one provider as low as possible and document what I deliver, so your team stays self-sufficient. My solutions adapt to your technical and business constraints, not the other way round.',
 			linkedin: 'See my LinkedIn profile',
 			malt: 'See my Malt profile',
 		},
@@ -642,10 +641,10 @@ export const en: Dictionary = {
 			malt: 'View on Malt',
 		},
 		finalCta: {
-			title: 'Ton SaaS mérite mieux que des correctifs en urgence.',
-			text: "Tu as déjà un projet en tête, ou simplement des questions sur ton code, ton infrastructure ou ton prochain déploiement ? Parlons-en. Un premier échange suffit pour identifier les priorités et voir comment je peux t'aider.",
-			button: 'Réserver un échange gratuit',
-			conversation: '45 minutes sur Google Meet. Sans engagement.',
+			title: 'Your SaaS deserves better than emergency fixes.',
+			text: "Already have a project in mind, or just questions about your code, your infrastructure or your next deployment? Let's talk. A first conversation is enough to identify the priorities and see how I can help.",
+			button: 'Book a free conversation',
+			conversation: '45 minutes on Google Meet. No commitment.',
 			bookingNotice:
 				'The booking page is in French, but the conversation can be in English or Portuguese.',
 		},
@@ -661,29 +660,29 @@ export const en: Dictionary = {
 				description: 'For anyone evaluating the service.',
 				questions: [
 					{
-						question: 'Que fais-tu, exactement ?',
+						question: 'What exactly do you do?',
 						answer:
-							"J'interviens sur quatre domaines : audit et CI/CD, nettoyage et optimisation du code, infrastructure scalable et observabilité. L'objectif est de réduire les problèmes récurrents et de permettre à l'application de grandir sur des bases plus solides. Le périmètre de chaque mission est défini après diagnostic.",
+							'I work in four areas: audit and CI/CD, code cleanup and optimisation, scalable infrastructure and observability. The goal is to reduce recurring problems and let the application grow on more solid foundations. The scope of each engagement is set after the diagnosis.',
 					},
 					{
-						question: 'Combien de temps ça prend ?',
+						question: 'How long does it take?',
 						answer:
-							"Cela dépend de l'état du code, des services existants et des travaux prioritaires. Après le diagnostic, je propose un calendrier réaliste, avec des étapes et des livrables précis. Il n'y a pas de promesse artificielle de tout réaliser en 30 jours.",
+							'It depends on the state of the code, the existing services and the priority work. After the diagnosis, I propose a realistic schedule, with precise steps and deliverables. There is no artificial promise to get everything done in 30 days.',
 					},
 					{
-						question: 'Combien ça coûte ?',
+						question: 'How much does it cost?',
 						answer:
-							"Le prix est défini à partir du périmètre convenu après un premier diagnostic gratuit. La proposition distingue mes honoraires des éventuels coûts récurrents de cloud et d'outils.",
+							'The price is set from the scope agreed after a free first diagnosis. The proposal keeps my fees separate from any recurring cloud and tool costs.',
 					},
 					{
-						question: 'Comment ça commence ?',
+						question: 'How does it start?',
 						answer:
-							"Nous commençons par un échange gratuit de 45 minutes. Viennent ensuite le diagnostic, la proposition d'intervention, la mise en œuvre avec des points d'avancement réguliers, puis la livraison et la passation à ton équipe.",
+							'We start with a free 45-minute conversation. Then come the diagnosis, the intervention proposal, the implementation with regular progress meetings, and finally the delivery and handover to your team.',
 					},
 					{
-						question: 'Puis-je choisir seulement certains blocs ?',
+						question: 'Can I choose only some of the blocks?',
 						answer:
-							"Oui, je peux intervenir sur un besoin ciblé. L'ordre et les dépendances techniques sont déterminés après diagnostic. La garantie de conformité technique de trois mois présentée sur ce site concerne uniquement les prestations complètes couvrant les quatre blocs.",
+							'Yes, I can work on a specific need. The order and the technical dependencies are set after the diagnosis. The three-month technical conformity guarantee presented on this site applies only to complete engagements covering the four blocks.',
 					},
 				],
 			},
@@ -694,39 +693,39 @@ export const en: Dictionary = {
 					'Infrastructure, CI/CD, testing, scaling, reliability, observability and working with the team.',
 				questions: [
 					{
-						question: 'Qui écrit les tests ?',
+						question: 'Who writes the tests?',
 						answer:
-							"Je mets en place et j'améliore l'automatisation des contrôles. Lorsque des tests ou des corrections de code sont nécessaires, nous décidons ensemble qui les réalise et dans quel périmètre. Dans le bloc d'optimisation, je peux écrire ou adapter les tests liés aux modifications que je prends en charge.",
+							'I set up and improve the automation of the checks. When tests or code fixes are needed, we decide together who does them and within what scope. In the optimisation block, I can write or adapt the tests related to the changes I take on.',
 					},
 					{
-						question: "Faut-il arrêter le développement pendant l'intervention ?",
+						question: 'Does development have to stop during the intervention?',
 						answer:
-							"En principe non. Le travail est organisé avec des branches, des environnements adaptés et des validations progressives. Certaines migrations ou modifications critiques peuvent exiger une fenêtre de changement planifiée avec l'équipe.",
+							'Normally not. The work is organised with branches, suitable environments and gradual approvals. Some migrations or critical changes may need a change window planned with the team.',
 					},
 					{
-						question: 'Avec quelles stacks et quels clouds travailles-tu ?',
+						question: 'Which stacks and clouds do you work with?',
 						answer:
-							"J'utilise notamment GitHub Actions, GitLab CI, Terraform, Docker, Kubernetes, Grafana et les services natifs des clouds. Je travaille avec AWS, Google Cloud, Azure, Scaleway, OVHcloud et d'autres fournisseurs selon le projet. Les outils sont choisis en fonction du contexte, pas imposés à l'avance.",
+							"I use GitHub Actions, GitLab CI, Terraform, Docker, Kubernetes, Grafana and the clouds' native services, among others. I work with AWS, Google Cloud, Azure, Scaleway, OVHcloud and other providers, depending on the project. The tools are chosen for the context, not imposed in advance.",
 					},
 					{
-						question: 'De quels accès as-tu besoin ?',
+						question: 'What access do you need?',
 						answer:
-							"Pour le diagnostic, des accès en lecture au code et, si nécessaire, aux métriques et à la configuration cloud. Pour l'implémentation, des droits adaptés aux opérations convenues. Je privilégie des accès nominatifs, limités au strict nécessaire et révocables à la fin de la mission. Il n'est pas nécessaire de partager des mots de passe ou des clés privées.",
+							'For the diagnosis, read access to the code and, if needed, to the metrics and the cloud configuration. For the implementation, permissions suited to the agreed operations. I prefer personal access, limited to what is strictly necessary and revoked at the end of the engagement. There is no need to share passwords or private keys.',
 					},
 					{
-						question: 'Que couvre la garantie de trois mois ?',
+						question: 'What does the three-month guarantee cover?',
 						answer:
-							"Pour une prestation complète couvrant les quatre blocs, elle concerne les défauts de conception ou de configuration de l'infrastructure qui me sont imputables, selon les conditions contractuelles. L'objectif de disponibilité est défini avec le client. Il ne s'agit ni d'une garantie de zéro bug applicatif, ni d'une astreinte 24 h/24.",
+							'For a complete engagement covering the four blocks, it covers the infrastructure design or configuration defects attributable to me, under the contractual conditions. The availability objective is set with the client. It is neither a guarantee of zero application bugs nor round-the-clock on-call support.',
 					},
 					{
-						question: "Quels outils utilises-tu pour l'observabilité ?",
+						question: 'Which tools do you use for observability?',
 						answer:
-							"Selon le contexte, Grafana, Prometheus, des solutions de logs et de tracing, ou les outils de supervision natifs du fournisseur cloud. Le but est de disposer d'indicateurs utiles et d'alertes exploitables, plutôt que de multiplier les dashboards.",
+							"Depending on the context, Grafana, Prometheus, logging and tracing solutions, or the cloud provider's native monitoring tools. The aim is to have useful metrics and actionable alerts, rather than piling up dashboards.",
 					},
 					{
-						question: 'Comment travaillons-nous ensemble ?',
+						question: 'How do we work together?',
 						answer:
-							"J'échange directement avec les personnes concernées : CTO, tech lead, développeurs et responsable du projet. Nous organisons des points d'avancement réguliers, généralement chaque semaine, et nous documentons les décisions importantes.",
+							'I talk directly with the people involved: CTO, tech lead, developers and project owner. We hold regular progress meetings, usually every week, and we document the important decisions.',
 					},
 				],
 			},
@@ -736,34 +735,34 @@ export const en: Dictionary = {
 				description: 'Risks, costs, continuity, predictability and business impact.',
 				questions: [
 					{
-						question: "Quand connaîtrai-je le budget de l'intervention ?",
+						question: 'When will I know the budget for the intervention?',
 						answer:
-							'Après le diagnostic gratuit, tu reçois une proposition précisant les travaux, le calendrier et le prix de mon intervention. Les éventuels coûts mensuels des fournisseurs sont présentés séparément.',
+							'After the free diagnosis, you receive a proposal setting out the work, the schedule and the price of my intervention. Any monthly provider costs are presented separately.',
 					},
 					{
-						question: 'Combien coûtera le cloud ensuite ?',
+						question: 'How much will the cloud cost afterwards?',
 						answer:
-							"Le coût dépend de l'architecture, du trafic, des données, de la région et du niveau de disponibilité recherché. Je présente une estimation argumentée avant les décisions structurantes, avec les hypothèses et les principaux postes de dépenses.",
+							'The cost depends on the architecture, the traffic, the data, the region and the availability level you aim for. I present a reasoned estimate before the major decisions, with the assumptions and the main cost items.',
 					},
 					{
-						question: 'Mon entreprise va-t-elle dépendre de toi ?',
+						question: 'Will my company depend on you?',
 						answer:
-							"Mon objectif est l'inverse : je privilégie des technologies documentées, une infrastructure décrite comme du code et une passation claire. Les dépendances propres au fournisseur choisi sont expliquées dès la conception.",
+							'My goal is the opposite: I favour documented technologies, infrastructure described as code and a clear handover. The dependencies specific to the chosen provider are explained from the design stage.',
 					},
 					{
-						question: 'Y a-t-il un risque pour la production ?',
+						question: 'Is there a risk for production?',
 						answer:
-							"Toute intervention présente des risques, mais ils sont évalués avant l'exécution. Nous préparons les tests, les sauvegardes et, lorsque c'est pertinent, un plan de retour arrière. Les changements sensibles sont coordonnés avec ton équipe.",
+							'Every intervention carries risks, but they are assessed before anything is done. We prepare the tests, the backups and, when relevant, a rollback plan. Sensitive changes are coordinated with your team.',
 					},
 					{
-						question: 'Quel retour sur investissement puis-je attendre ?',
+						question: 'What return on investment can I expect?',
 						answer:
-							'Moins de temps perdu sur les incidents et les tâches répétitives, un code plus maintenable et des déploiements plus fiables. Les gains exacts dépendent de la situation de départ ; le diagnostic sert aussi à identifier les améliorations à plus forte valeur.',
+							'Less time lost on incidents and repetitive tasks, more maintainable code and more reliable deployments. The exact gains depend on the starting point; the diagnosis also serves to identify the improvements with the most value.',
 					},
 					{
-						question: 'Dans quelles langues travailles-tu ?',
+						question: 'Which languages do you work in?',
 						answer:
-							"Je peux intervenir en français, en anglais et en portugais, selon les besoins de l'équipe et du projet.",
+							'I can work in French, English and Portuguese, depending on the needs of the team and the project.',
 					},
 				],
 			},
@@ -774,47 +773,47 @@ export const en: Dictionary = {
 					'Devs and tech leads who will work with the pipeline and the new infrastructure.',
 				questions: [
 					{
-						question: "Qu'est-ce qui change au quotidien ?",
+						question: 'What changes day to day?',
 						answer:
-							"Des contrôles automatisés plus utiles, moins de tâches manuelles, une meilleure visibilité sur les problèmes et un code progressivement plus simple à maintenir. Les modifications de workflow sont préparées avec l'équipe, pas imposées sans discussion.",
+							'More useful automated checks, fewer manual tasks, better visibility into problems and code that gradually becomes simpler to maintain. Workflow changes are prepared with the team, not imposed without discussion.',
 					},
 					{
-						question: 'Qui maintient les pipelines après ton départ ?',
+						question: 'Who maintains the pipelines after you leave?',
 						answer:
-							'Ton équipe conserve les outils, les configurations et la documentation. Je prévois une passation pour que leur fonctionnement soit compris et que les évolutions puissent être réalisées en autonomie.',
+							'Your team keeps the tools, the configurations and the documentation. I plan a handover so that how they work is understood and changes can be made independently.',
 					},
 					{
-						question: 'Avec qui communiques-tu pendant la mission ?',
+						question: 'Who do you communicate with during the engagement?',
 						answer:
-							'Avec les interlocuteurs techniques et métier utiles au projet. Nous prévoyons un point de suivi régulier, normalement hebdomadaire, et des échanges complémentaires lorsque des décisions ou des validations sont nécessaires.',
+							'With the technical and business contacts the project needs. We plan a regular follow-up meeting, normally weekly, and extra exchanges when decisions or approvals are needed.',
 					},
 					{
-						question: 'Peut-on continuer à développer pendant les changements ?',
+						question: 'Can we keep developing during the changes?',
 						answer:
-							"Oui, l'objectif est de préserver le rythme de développement. Les modifications sont préparées et testées en parallèle lorsque c'est possible. Une fenêtre de stabilisation ou de migration peut être convenue pour les changements sensibles.",
+							'Yes, the goal is to keep the pace of development. Changes are prepared and tested in parallel whenever possible. A stabilisation or migration window can be agreed for sensitive changes.',
 					},
 					{
-						question: 'Quels outils allons-nous utiliser ?',
+						question: 'Which tools will we use?',
 						answer:
-							"Il n'y a pas de stack imposée. Selon le projet : pipelines CI/CD, analyse de code, outils de refactoring et de performance, Docker, services de conteneurs managés, Kubernetes, Terraform, Grafana, Prometheus ou équivalents. Je privilégie les outils pertinents pour l'équipe et l'existant.",
+							'There is no imposed stack. Depending on the project: CI/CD pipelines, code analysis, refactoring and performance tools, Docker, managed container services, Kubernetes, Terraform, Grafana, Prometheus or equivalents. I favour the tools that make sense for the team and for what already exists.',
 					},
 				],
 			},
 		},
 		page: {
 			description:
-				"Questions et réponses pour les CEO, les CTO et les développeurs : le code, l'infrastructure, les coûts et notre façon de travailler.",
-			title: 'Des réponses concrètes, selon ton rôle.',
+				'Questions and answers for CEOs, CTOs and developers: the code, the infrastructure, the costs and how we work.',
+			title: 'Concrete answers, for your role.',
 			intro:
-				"Tu es CEO, CTO, développeur ou tu portes le projet seul ? Retrouve les réponses aux questions les plus fréquentes sur le code, l'infrastructure, les coûts et notre façon de travailler. Et si ta question n'est pas ici, parlons-en.",
+				"Are you a CEO, a CTO, a developer, or carrying the project on your own? Find the answers to the most frequent questions about the code, the infrastructure, the costs and how we work. And if your question is not here, let's talk.",
 			filter: 'Filter by role',
 			everyone: 'All',
 			search: 'Search the questions',
 			searchPlaceholder: 'Search: tests, costs, access…',
 			noResults: 'No questions with those words.',
 			index: 'Roles',
-			notFound: 'Tu ne trouves pas ta réponse ?',
-			notFoundText: 'Réserve un échange gratuit et parlons de ton contexte.',
+			notFound: "Can't find your answer?",
+			notFoundText: "Book a free conversation and let's talk about your context.",
 		},
 	},
 };
