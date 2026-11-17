@@ -8,20 +8,31 @@ import { BOOKING_PAGE, LANGUAGES, NAME, type Language } from './expected';
 const ANSSI_CATALOGUE =
 	'https://messervices.cyber.gouv.fr/visas/catalogue-produits-services-profils-de-protection-sites-certifies-qualifies-agrees-anssi.pdf';
 
-/** The page's texts, from Julien's document; English keeps the French ones until it is translated. */
-const FRENCH_PAGE = {
-	name: 'Choisir son cloud',
-	title: 'Quel cloud choisir pour ton entreprise ?',
-	intro:
-		'Le meilleur cloud dépend de ton produit, de ton équipe, de ta croissance, de ton budget et de tes contraintes réglementaires. Compare les options selon ton contexte, plutôt que de choisir un fournisseur uniquement sur sa notoriété.',
-	description:
-		'Le meilleur cloud dépend de ton produit, de ton équipe, de ta croissance, de ton budget et de tes contraintes réglementaires. Compare les fournisseurs selon tes priorités.',
-	end: 'Tu hésites entre plusieurs architectures ?',
-	endText: 'Parlons de ton projet et comparons les options adaptées à tes contraintes.',
-};
-const PAGE: Record<Language, typeof FRENCH_PAGE> = {
-	fr: FRENCH_PAGE,
-	en: FRENCH_PAGE,
+/** The page's texts, from Julien's document. */
+const PAGE: Record<
+	Language,
+	{ name: string; title: string; intro: string; description: string; end: string; endText: string }
+> = {
+	fr: {
+		name: 'Choisir son cloud',
+		title: 'Quel cloud choisir pour ton entreprise ?',
+		intro:
+			'Le meilleur cloud dépend de ton produit, de ton équipe, de ta croissance, de ton budget et de tes contraintes réglementaires. Compare les options selon ton contexte, plutôt que de choisir un fournisseur uniquement sur sa notoriété.',
+		description:
+			'Le meilleur cloud dépend de ton produit, de ton équipe, de ta croissance, de ton budget et de tes contraintes réglementaires. Compare les fournisseurs selon tes priorités.',
+		end: 'Tu hésites entre plusieurs architectures ?',
+		endText: 'Parlons de ton projet et comparons les options adaptées à tes contraintes.',
+	},
+	en: {
+		name: 'Choosing a cloud',
+		title: 'Which cloud should your company choose?',
+		intro:
+			'The best cloud depends on your product, your team, your growth, your budget and your regulatory constraints. Compare the options in your own context, rather than choosing a provider on its reputation alone.',
+		description:
+			'The best cloud depends on your product, your team, your growth, your budget and your regulatory constraints. Compare the providers according to your priorities.',
+		end: "Can't decide between several architectures?",
+		endText: "Let's talk about your project and compare the options that fit your constraints.",
+	},
 	pt: {
 		name: 'Escolher a cloud',
 		title: 'Que cloud escolher para a tua empresa?',
@@ -85,10 +96,7 @@ const RESULTS: { ratings: Rating[] }[] = [
 	{ ratings: ['possible', 'possible', 'unsuitable', 'possible', 'consider', 'consider'] },
 ];
 
-const FRENCH_LEGEND =
-	'Les résultats sont des repères pour préparer une décision, pas un classement universel. Les critères et leur importance peuvent varier selon le projet. Les données sont datées et les évaluations de pertinence sont indicatives.';
-
-// The chart's texts. English shows the French ones of Julien's document until it is translated.
+// The chart's texts.
 const EXPECTED: Record<
 	Language,
 	{
@@ -151,7 +159,8 @@ const EXPECTED: Record<
 		title: 'Compare les fournisseurs selon tes priorités',
 		instruction:
 			'Choisis un scénario pour voir les points forts, les limites et les sources officielles de chaque fournisseur.',
-		legend: FRENCH_LEGEND,
+		legend:
+			'Les résultats sont des repères pour préparer une décision, pas un classement universel. Les critères et leur importance peuvent varier selon le projet. Les données sont datées et les évaluations de pertinence sont indicatives.',
 		verified: 'Faits vérifiés le 13 nov. 2026.',
 		scenarios: [
 			'Avant le lancement',
@@ -180,16 +189,17 @@ const EXPECTED: Record<
 			"En Europe, l'AWS European Sovereign Cloud est disponible depuis janvier 2026, avec une région en Allemagne.",
 	},
 	en: {
-		title: 'Compare les fournisseurs selon tes priorités',
+		title: 'Compare the providers according to your priorities',
 		instruction:
-			'Choisis un scénario pour voir les points forts, les limites et les sources officielles de chaque fournisseur.',
-		legend: FRENCH_LEGEND,
-		verified: 'Faits vérifiés le Nov 13, 2026.',
+			'Choose a scenario to see the strengths, the limits and the official sources of each provider.',
+		legend:
+			'The results are reference points to prepare a decision, not a universal ranking. The criteria and their importance can vary from project to project. The data is dated and the suitability ratings are indicative.',
+		verified: 'Facts checked on Nov 13, 2026.',
 		scenarios: [
 			'Before launch',
 			'Growing SaaS',
 			'Highly variable load',
-			'Maîtrise des coûts',
+			'Cost control',
 			'Data sovereignty',
 		],
 		ratings: { consider: 'Worth considering', possible: 'Possible', unsuitable: 'Less suited' },
@@ -205,7 +215,7 @@ const EXPECTED: Record<
 		read: 'Nov 13, 2026',
 		catalogueRead: 'Nov 16, 2026',
 		awsInEurope:
-			"En Europe, l'AWS European Sovereign Cloud est disponible depuis janvier 2026, avec une région en Allemagne.",
+			'In Europe, the AWS European Sovereign Cloud has been available since January 2026, with a region in Germany.',
 	},
 };
 

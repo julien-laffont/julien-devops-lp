@@ -1,5 +1,4 @@
 // The domain, the languages and what each phase of the page publishes.
-// The Commercial launch PR changes only this file: `CURRENT_PHASE` becomes `COMMERCIAL_LAUNCH`.
 
 export const SITE = 'https://devops.julienlaffont.com';
 
@@ -30,7 +29,7 @@ export const FIRST_REVIEW: Phase = { publishedLanguages: ['fr', 'pt'], noindex: 
 export const COMMERCIAL_LAUNCH: Phase = { publishedLanguages: LANGUAGES, noindex: false };
 
 /** The phase of the published site. */
-export const CURRENT_PHASE: Phase = FIRST_REVIEW;
+export const CURRENT_PHASE: Phase = COMMERCIAL_LAUNCH;
 
 /**
  * The phase this build generates: the current one, or the Commercial launch in the test build

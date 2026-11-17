@@ -36,12 +36,15 @@ inEachBuild((build) => {
 	}
 
 	test('the hreflang tags are reciprocal', async ({ page }) => {
+		// Each page is opened once, and the reciprocity is checked on the tags already read.
+		const tagsByPath = new Map<string, Record<string, string>>();
+		for (const { path } of languagePages) tagsByPath.set(path, await hreflang(page, path));
 		let checked = 0;
 		for (const { path, language } of languagePages) {
-			for (const [code, url] of Object.entries(await hreflang(page, path))) {
+			for (const [code, url] of Object.entries(tagsByPath.get(path)!)) {
 				if (code === 'x-default') continue;
-				const otherTags = await hreflang(page, new URL(url).pathname);
-				expect(otherTags[language!], `${url} points back to ${path}`).toBe(`${SITE}${path}`);
+				const otherTags = tagsByPath.get(new URL(url).pathname);
+				expect(otherTags?.[language!], `${url} points back to ${path}`).toBe(`${SITE}${path}`);
 				checked++;
 			}
 		}
