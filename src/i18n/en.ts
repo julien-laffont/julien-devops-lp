@@ -11,6 +11,7 @@ export const en: Dictionary = {
 		logoTarget: 'home page',
 		languages: 'Language',
 		menu: 'Menu',
+		questions: 'Questions',
 		resources: 'Resources',
 	},
 	animation: {

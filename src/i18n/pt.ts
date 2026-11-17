@@ -71,6 +71,7 @@ export const pt: Dictionary = {
 		logoTarget: 'página principal',
 		languages: 'Língua',
 		menu: 'Menu',
+		questions: 'Perguntas',
 		resources: 'Recursos',
 	},
 	animation: {
