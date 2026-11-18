@@ -39,6 +39,11 @@ Single-context: one `CONTEXT.md` and `docs/adr/` at the repo root, created when 
 
 Start each work branch from `develop` and open its PR into `develop`. `main` only receives releases (a PR from `develop`, merged with a merge commit) and hotfixes; each merge into `main` publishes the site. See "Branches" in `README.md`.
 
+To save the account's CI minutes, the `Checks` workflow only runs on PRs into `main` (releases and hotfixes). PRs into `develop` get no CI, so you are the CI:
+
+- Run `npm run verify` before every push, and push only when it passes.
+- Before merging a Dependabot PR into `develop`, check out its branch and run `npm run verify` there.
+
 ## Language
 
 - Everything in the repo is in English: code, comments, test titles, messages, scripts, CI and docs.
