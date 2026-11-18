@@ -1,5 +1,5 @@
 // The data sovereignty page: Julien's texts, an educational table of cloud providers with an official
-// source for each value, and the booking button. The «Ressources» submenu leads to it.
+// source for each value, and the booking button. The header's «Ressources» list leads to it.
 import { expect, test } from '@playwright/test';
 import { inEachBuild } from './builds';
 import { BOOKING_PAGE, LANGUAGES, NAME, type Language } from './expected';

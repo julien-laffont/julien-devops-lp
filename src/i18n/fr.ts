@@ -47,7 +47,9 @@ export const fr = {
 		languages: 'Langue',
 		/** The button that opens the menu on mobile. */
 		menu: 'Menu',
-		/** The submenu of the pages that help a CTO decide. */
+		/** In the «Tes défis» panel: the column of questions by audience. */
+		questions: 'Questions',
+		/** In the «Tes défis» panel: the column of the pages that help a CTO decide. */
 		resources: 'Ressources',
 	},
 	/** The fixed button that pauses the automatic animations: its name says what a click does. */
@@ -57,7 +59,7 @@ export const fr = {
 	},
 	/** The «Choisir son cloud» page: Julien's introduction, the cloud provider chart and the button. */
 	cloud: {
-		/** The page's entry in the «Ressources» submenu. */
+		/** The page's entry in the header's «Ressources» list. */
 		link: 'Choisir son cloud',
 		page: {
 			title: 'Quel cloud choisir pour ton entreprise ?',

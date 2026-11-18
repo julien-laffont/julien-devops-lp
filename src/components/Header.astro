@@ -1,6 +1,6 @@
 ---
-// The sticky header of every page: the logo, «Os teus desafios» with its submenu of audiences,
-// Resources with its submenu of pages, 🍃 Ecology, the language switcher, LinkedIn, Malt and the button.
+// The sticky header of every page: the logo, «Os teus desafios» with its panel of two columns (the
+// audiences, then the Resources pages), 🍃 Ecology, the language switcher, LinkedIn, Malt and the button.
 // Below 1024 px, the audiences, the pages, the languages, LinkedIn and Malt move into a `<details>` menu,
 // which opens without JS; the button and the leaf always stay visible, the leaf without its word on
 // phones. Below 360 px, Ecology only lives in the menu.
@@ -44,60 +44,39 @@ const onEcology = Astro.url.pathname === ecology ? 'page' : undefined;
 
 		<div class="ml-auto flex items-center gap-2 xl:gap-4">
 			{!noEquivalents && (
-				<nav aria-label={t.questions.menu} class="max-lg:hidden">
-					<details data-menu class="group relative">
-						<summary class="inline-flex min-h-11 cursor-pointer list-none items-center gap-1.5 rounded-lg px-3 text-[0.9375rem] text-foreground-secondary transition-colors group-open:bg-surface group-open:text-foreground hover:bg-surface hover:text-foreground [&::-webkit-details-marker]:hidden">
-							{t.questions.menu}
-							<svg
-								width="12"
-								height="12"
-								viewBox="0 0 12 12"
-								aria-hidden="true"
-								class="transition-transform group-open:rotate-180"
-							>
-								<path
-									d="M2.5 4.5 6 8l3.5-3.5"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="1.6"
-								></path>
-							</svg>
-						</summary>
-						<AudienceLinks
-							language={language}
-							descriptions
-							class="absolute top-[calc(100%+0.5rem)] right-0 grid w-[22rem] gap-0.5 rounded-xl border border-line bg-surface p-2 shadow-[0_18px_40px_rgb(0_0_0/0.45)]"
-						/>
-					</details>
-				</nav>
-			)}
-
-			{!noEquivalents && (
-				<nav aria-label={t.header.resources} class="max-lg:hidden">
-					<details data-menu class="group relative">
-						<summary class="inline-flex min-h-11 cursor-pointer list-none items-center gap-1.5 rounded-lg px-3 text-[0.9375rem] text-foreground-secondary transition-colors group-open:bg-surface group-open:text-foreground hover:bg-surface hover:text-foreground [&::-webkit-details-marker]:hidden">
-							{withNonBreakingSpaces(t.header.resources)}
-							<svg
-								width="12"
-								height="12"
-								viewBox="0 0 12 12"
-								aria-hidden="true"
-								class="transition-transform group-open:rotate-180"
-							>
-								<path
-									d="M2.5 4.5 6 8l3.5-3.5"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="1.6"
-								></path>
-							</svg>
-						</summary>
-						<ResourceLinks
-							language={language}
-							class="absolute top-[calc(100%+0.5rem)] right-0 grid w-max gap-0.5 rounded-xl border border-line bg-surface p-2 shadow-[0_18px_40px_rgb(0_0_0/0.45)]"
-						/>
-					</details>
-				</nav>
+				<details data-menu class="group relative max-lg:hidden">
+					<summary class="inline-flex min-h-11 cursor-pointer list-none items-center gap-1.5 rounded-lg px-3 text-[0.9375rem] text-foreground-secondary transition-colors group-open:bg-surface group-open:text-foreground hover:bg-surface hover:text-foreground [&::-webkit-details-marker]:hidden">
+						{t.questions.menu}
+						<svg
+							width="12"
+							height="12"
+							viewBox="0 0 12 12"
+							aria-hidden="true"
+							class="transition-transform group-open:rotate-180"
+						>
+							<path
+								d="M2.5 4.5 6 8l3.5-3.5"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.6"
+							></path>
+						</svg>
+					</summary>
+					<div class="absolute top-[calc(100%+0.5rem)] left-0 grid grid-cols-[22rem_auto] rounded-xl border border-line bg-surface py-4 shadow-[0_18px_40px_rgb(0_0_0/0.45)]">
+						<nav aria-labelledby="panel-questions" class="px-2">
+							<p id="panel-questions" class="px-3 pb-2 font-semibold text-foreground">
+								{t.header.questions}
+							</p>
+							<AudienceLinks language={language} descriptions class="grid gap-0.5" />
+						</nav>
+						<nav aria-labelledby="panel-resources" class="border-l border-line px-2">
+							<p id="panel-resources" class="px-2 pb-2 font-semibold text-foreground">
+								{withNonBreakingSpaces(t.header.resources)}
+							</p>
+							<ResourceLinks language={language} class="grid w-max gap-0.5" />
+						</nav>
+					</div>
+				</details>
 			)}
 
 			{!noEquivalents && (
