@@ -11,6 +11,7 @@ export const en: Dictionary = {
 		logoTarget: 'home page',
 		languages: 'Language',
 		menu: 'Menu',
+		questions: 'Questions',
 		resources: 'Resources',
 	},
 	animation: {
@@ -314,8 +315,8 @@ export const en: Dictionary = {
 				contract: 'Jurisdictions',
 				backupsAndLogs: 'Backups and logs',
 				certifications: 'Certifications of the offering',
-				references: 'Official references',
 			},
+			sources: 'Official sources by provider',
 			colon: ':',
 			notDisclosed: 'not disclosed',
 			group: 'Group',

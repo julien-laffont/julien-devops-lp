@@ -1,5 +1,6 @@
 ---
-// The table of providers: it scrolls sideways by itself, and takes focus so the arrows scroll it.
+// The table of providers, which scrolls sideways by itself and takes focus so the arrows scroll it, and
+// under it each provider's official sources in a `<details>` that opens without JS.
 import { HTML_CODES, type Language } from '../config/site';
 import {
 	EU_MEMBERS,
@@ -142,23 +143,35 @@ function references(provider: Provider) {
 							))}
 						</td>
 					))}
-					<td class="text-xs">
-						<ul class="grid gap-1.5">
-							{references(provider).links.map(({ url, of }) => (
-								<li>
-									{withNonBreakingSpaces(`${of}${t.colon}`)} <a href={url}>{hostnameOf(url)}</a>
-								</li>
-							))}
-						</ul>
-						<p class="mt-2 text-foreground-secondary">
-							{withNonBreakingSpaces(references(provider).read)}
-						</p>
-					</td>
 				</tr>
 			))}
 		</tbody>
 	</table>
 </div>
+
+<details class="sources text-sm">
+	<summary>{withNonBreakingSpaces(t.sources)}</summary>
+	<ul class="grid gap-6 pt-3 sm:grid-cols-2 lg:grid-cols-3">
+		{SOVEREIGNTY_PROVIDERS.map((provider) => {
+			const { links, read } = references(provider);
+			return (
+				<li class="grid content-start gap-1.5">
+					<p id={`sources-${provider.id}`} class="font-semibold">
+						{provider.name}
+					</p>
+					<ul aria-labelledby={`sources-${provider.id}`} class="grid gap-1.5">
+						{links.map(({ url, of }) => (
+							<li>
+								{withNonBreakingSpaces(`${of}${t.colon}`)} <a href={url}>{hostnameOf(url)}</a>
+							</li>
+						))}
+					</ul>
+					<p class="text-foreground-secondary">{withNonBreakingSpaces(read)}</p>
+				</li>
+			);
+		})}
+	</ul>
+</details>
 
 <style>
 	th,
@@ -182,9 +195,38 @@ function references(provider: Provider) {
 		left: 0;
 		background: var(--color-surface);
 	}
-	td a {
-		color: var(--color-green);
-		text-decoration: underline;
-		text-underline-offset: 3px;
+	.sources {
+		summary {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			width: fit-content;
+			min-height: 2.75rem;
+			font-weight: 500;
+			color: var(--color-green);
+			cursor: pointer;
+			list-style: none;
+
+			&::-webkit-details-marker {
+				display: none;
+			}
+
+			/* A + that turns into a × when the sources are open. */
+			&::after {
+				content: '+';
+				font-size: 1.1rem;
+				transition: transform 0.2s;
+			}
+		}
+
+		&[open] summary::after {
+			transform: rotate(45deg);
+		}
+
+		a {
+			color: var(--color-green);
+			text-decoration: underline;
+			text-underline-offset: 3px;
+		}
 	}
 </style>

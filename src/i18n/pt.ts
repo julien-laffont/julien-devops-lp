@@ -71,6 +71,7 @@ export const pt: Dictionary = {
 		logoTarget: 'página principal',
 		languages: 'Língua',
 		menu: 'Menu',
+		questions: 'Perguntas',
 		resources: 'Recursos',
 	},
 	animation: {
@@ -379,8 +380,8 @@ export const pt: Dictionary = {
 				contract: 'Jurisdições',
 				backupsAndLogs: 'Cópias de segurança e logs',
 				certifications: 'Certificações da oferta',
-				references: 'Referências oficiais',
 			},
+			sources: 'Fontes oficiais por fornecedor',
 			colon: ':',
 			notDisclosed: 'não divulgado',
 			group: 'Grupo',

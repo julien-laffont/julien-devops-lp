@@ -155,6 +155,7 @@ inEachBuild((build) => {
 				const headerBottom = await page
 					.getByRole('banner')
 					.evaluate((e) => e.getBoundingClientRect().bottom);
+				const room = page.viewportSize()!.height - headerBottom;
 				let checked = 0;
 				for (; checked < 30; checked++) {
 					const focused = await page.evaluate(async () => {
@@ -164,14 +165,21 @@ inEachBuild((build) => {
 							requestAnimationFrame(() => requestAnimationFrame(resolve)),
 						);
 						const e = document.activeElement!;
+						const { top, bottom } = e.getBoundingClientRect();
 						return {
 							inHeader: !!e.closest('header'),
-							top: e.getBoundingClientRect().top,
+							top,
+							bottom,
 							description: e.outerHTML.slice(0, 80),
 						};
 					});
 					if (focused.inHeader) break;
-					expect(focused.top, focused.description).toBeGreaterThanOrEqual(headerBottom);
+					if (focused.bottom - focused.top <= room) {
+						expect(focused.top, focused.description).toBeGreaterThanOrEqual(headerBottom);
+					} else {
+						// Taller than the room under the header, like the table: part of it shows below the header.
+						expect(focused.bottom, focused.description).toBeGreaterThan(headerBottom);
+					}
 					await page.keyboard.press('Shift+Tab');
 				}
 				expect(checked, 'focused elements outside the header').toBeGreaterThan(1);
