@@ -24,7 +24,9 @@ interface Texts {
 		/** The AWS row, cell by cell after the provider. */
 		aws: string[];
 		notDisclosed: string;
-		/** Under each row's references: the day the sources were read. */
+		/** The closed block of sources under the table. */
+		sources: string;
+		/** Under each provider's sources: the days they were read. */
 		read: string;
 	};
 	/** The notes on Switzerland (third section) and on the CLOUD Act (fourth): text, then sources. */
@@ -111,7 +113,6 @@ const FR: Texts = {
 			'Juridictions',
 			'Sauvegardes et logs',
 			"Certifications de l'offre",
-			'Références officielles',
 		],
 		headquarters: [
 			['AWS', 'États-Unis'],
@@ -143,6 +144,7 @@ const FR: Texts = {
 			'HDS ISO/IEC 27001',
 		],
 		notDisclosed: 'non communiqué',
+		sources: 'Sources officielles par fournisseur',
 		read: 'Consultées le 13 nov. 2026, 16 nov. 2026',
 	},
 	notes: {
@@ -201,7 +203,6 @@ const EXPECTED: Record<Language, Texts> = {
 				'Jurisdictions',
 				'Backups and logs',
 				'Certifications of the offering',
-				'Official references',
 			],
 			headquarters: [
 				['AWS', 'United States'],
@@ -233,6 +234,7 @@ const EXPECTED: Record<Language, Texts> = {
 				'HDS ISO/IEC 27001',
 			],
 			notDisclosed: 'not disclosed',
+			sources: 'Official sources by provider',
 			read: 'Read on Nov 13, 2026, Nov 16, 2026',
 		},
 		notes: {
@@ -286,7 +288,6 @@ const EXPECTED: Record<Language, Texts> = {
 				'Jurisdições',
 				'Cópias de segurança e logs',
 				'Certificações da oferta',
-				'Referências oficiais',
 			],
 			headquarters: [
 				['AWS', 'Estados Unidos'],
@@ -318,6 +319,7 @@ const EXPECTED: Record<Language, Texts> = {
 				'HDS ISO/IEC 27001',
 			],
 			notDisclosed: 'não divulgado',
+			sources: 'Fontes oficiais por fornecedor',
 			read: 'Consultadas a 13/11/2026, 16/11/2026',
 		},
 		notes: {
@@ -405,17 +407,19 @@ inEachBuild((build) => {
 				expect(found).toEqual(NOT_DISCLOSED);
 			});
 
-			test("each row's references link to official sites and say when they were read", async ({
+			test("under the table, a closed block links each provider's official sites and says when they were read", async ({
 				page,
 			}) => {
 				await page.goto(path);
-				const table = page.getByRole('table', { name: expected.table.caption });
+				const section = page.getByRole('region', { name: expected.sections[2][0] });
+				await expect(section.getByRole('table').getByRole('link')).toHaveCount(0);
+				const sourcesOf = (provider: string) =>
+					page.getByRole('list', { name: provider, exact: true });
+				await expect(sourcesOf('AWS')).toBeHidden();
+				await section.getByText(expected.table.sources, { exact: true }).click();
 				for (const [provider, sites] of Object.entries(OFFICIAL_SITES)) {
-					const references = table
-						.locator('tbody tr')
-						.filter({ has: page.getByRole('rowheader', { name: provider, exact: true }) })
-						.getByRole('cell')
-						.last();
+					const references = section.getByRole('listitem').filter({ has: sourcesOf(provider) });
+					await expect(references).toBeVisible();
 					const links = references.getByRole('link');
 					expect(await links.count()).toBeGreaterThan(0);
 					for (const href of await links.evaluateAll((all) =>

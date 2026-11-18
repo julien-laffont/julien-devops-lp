@@ -397,8 +397,9 @@ export const fr = {
 				contract: 'Juridictions',
 				backupsAndLogs: 'Sauvegardes et logs',
 				certifications: "Certifications de l'offre",
-				references: 'Références officielles',
 			},
+			/** Under the table, the closed block of each provider's sources. */
+			sources: 'Sources officielles par fournisseur',
 			/** After a label, before what it introduces: French puts a space before it. */
 			colon: ' :',
 			/** A value no official source states. */
